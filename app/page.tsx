@@ -98,7 +98,7 @@ export default function Home() {
           </div>
 
           {/* Right: Food Truck Photo */}
-          <div style={{ position: "relative", overflow: "hidden" }}>
+          <div className="hero-photo-col" style={{ position: "relative", overflow: "hidden" }}>
             {/* Actual food truck photo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -157,7 +157,7 @@ export default function Home() {
                 grid-template-columns: 1fr !important;
                 min-height: auto !important;
               }
-              section:first-of-type > div:last-child {
+              .hero-photo-col {
                 display: none !important;
               }
               section:first-of-type > div:first-child {
