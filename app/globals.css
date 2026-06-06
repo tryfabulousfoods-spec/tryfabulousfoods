@@ -1,16 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --flame: #D94F00;
-  --flame-light: #F26419;
-  --char: #1A1A1A;
-  --cream: #FDF6EC;
-  --gold: #C8872B;
-  --seafoam: #1B6B6B;
+  --ivory: #FAFAF7;
+  --cream: #F2EDE3;
+  --cream-dark: #E8DFD0;
+  --forest: #1E3B2F;
+  --forest-light: #2C5241;
+  --terracotta: #C94E2A;
+  --terracotta-light: #E05C35;
+  --gold: #B8852A;
+  --teal: #1B5E52;
+  --text: #1C1C18;
+  --muted: #6B6860;
+  --white: #FFFFFF;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -18,7 +26,87 @@ html {
 }
 
 body {
-  font-family: 'Georgia', serif;
-  background-color: var(--cream);
-  color: var(--char);
+  font-family: var(--font-body, 'DM Sans', system-ui, sans-serif);
+  background-color: var(--ivory);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+}
+
+a {
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--terracotta);
+  color: #fff;
+  padding: 1rem 2.25rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--terracotta-light);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--forest);
+  padding: 1rem 2.25rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  border: 1.5px solid var(--forest);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--forest);
+  color: #fff;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.section-label {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 6px;
+  border: 1px solid var(--cream-dark);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(30,59,47,0.1);
+  transform: translateY(-2px);
 }

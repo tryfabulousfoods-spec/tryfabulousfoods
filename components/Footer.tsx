@@ -2,52 +2,124 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#1A1A1A", color: "#aaa", padding: "3rem 1.5rem 2rem" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "2rem", marginBottom: "2rem" }}>
+    <footer style={{ background: "#1E3B2F", color: "#9EB5A8", padding: "4rem 1.5rem 2.5rem" }}>
+      <div style={{ maxWidth: 1140, margin: "0 auto" }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gap: "2.5rem",
+          marginBottom: "3rem",
+        }}>
           {/* Brand */}
           <div>
-            <div style={{ color: "#D94F00", fontWeight: 800, fontSize: "1.1rem", letterSpacing: 1, textTransform: "uppercase", marginBottom: "0.5rem" }}>Try Fabulous Foods</div>
-            <div style={{ color: "#C8872B", fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase", marginBottom: "1rem" }}>Brick Oven Pizza & Seafood</div>
-            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#888" }}>
+            <div style={{
+              color: "#FAFAF7",
+              fontFamily: "var(--font-display, 'Playfair Display', serif)",
+              fontWeight: 800,
+              fontSize: "1.2rem",
+              marginBottom: "0.4rem",
+            }}>
+              Try Fabulous Foods
+            </div>
+            <div style={{
+              color: "#B8852A",
+              fontSize: "0.6rem",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              fontWeight: 500,
+              marginBottom: "1.25rem",
+            }}>
+              Brick Oven Pizza & Seafood
+            </div>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.7, color: "#7A9E90" }}>
               Virginia&apos;s first gourmet brick oven pizza &amp; seafood truck — built for large festivals &amp; events.
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <div style={{ color: "#FDF6EC", fontWeight: 700, marginBottom: "1rem", textTransform: "uppercase", fontSize: "0.8rem", letterSpacing: 2 }}>Quick Links</div>
-            {[["/#about", "About Us"], ["/menu", "Our Menu"], ["/#events", "Find Us"], ["/contact", "Contact"]].map(([href, label]) => (
-              <div key={href} style={{ marginBottom: "0.5rem" }}>
-                <Link href={href} style={{ color: "#888", textDecoration: "none", fontSize: "0.9rem" }}>{label}</Link>
+            <div style={{
+              color: "#FAFAF7",
+              fontWeight: 600,
+              marginBottom: "1.25rem",
+              textTransform: "uppercase",
+              fontSize: "0.7rem",
+              letterSpacing: "0.18em",
+            }}>
+              Quick Links
+            </div>
+            {[
+              ["/#about", "About Us"],
+              ["/menu", "Our Menu"],
+              ["/#events", "Find Us"],
+              ["/contact", "Book an Event"],
+            ].map(([href, label]) => (
+              <div key={href} style={{ marginBottom: "0.65rem" }}>
+                <Link href={href} style={{ color: "#7A9E90", textDecoration: "none", fontSize: "0.9rem", transition: "color 0.2s" }}>
+                  {label}
+                </Link>
               </div>
             ))}
           </div>
 
           {/* Contact */}
           <div>
-            <div style={{ color: "#FDF6EC", fontWeight: 700, marginBottom: "1rem", textTransform: "uppercase", fontSize: "0.8rem", letterSpacing: 2 }}>Get In Touch</div>
-            <p style={{ fontSize: "0.85rem", color: "#888", marginBottom: "0.5rem" }}>
-              <a href="mailto:tryfabulousfoods@gmail.com" style={{ color: "#C8872B", textDecoration: "none" }}>tryfabulousfoods@gmail.com</a>
+            <div style={{
+              color: "#FAFAF7",
+              fontWeight: 600,
+              marginBottom: "1.25rem",
+              textTransform: "uppercase",
+              fontSize: "0.7rem",
+              letterSpacing: "0.18em",
+            }}>
+              Get In Touch
+            </div>
+            <p style={{ fontSize: "0.88rem", marginBottom: "0.5rem" }}>
+              <a href="mailto:tryfabulousfoods@gmail.com" style={{ color: "#B8852A", textDecoration: "none" }}>
+                tryfabulousfoods@gmail.com
+              </a>
             </p>
-            <p style={{ fontSize: "0.85rem", color: "#888", marginBottom: "1rem" }}>PO Box 662, Orange, VA 22960</p>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <p style={{ fontSize: "0.88rem", color: "#7A9E90", marginBottom: "1.5rem" }}>
+              PO Box 662, Orange, VA 22960
+            </p>
+            <div style={{ display: "flex", gap: "0.75rem" }}>
               {[
-                ["https://www.facebook.com", "FB"],
-                ["https://www.instagram.com", "IG"],
-                ["https://www.tiktok.com/@tryfabulousfoodsva", "TT"],
+                ["https://www.facebook.com", "Facebook"],
+                ["https://www.instagram.com", "Instagram"],
+                ["https://www.tiktok.com/@tryfabulousfoodsva", "TikTok"],
               ].map(([href, label]) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
-                  background: "#333", color: "#FDF6EC", padding: "0.4rem 0.7rem",
-                  borderRadius: 4, fontSize: "0.75rem", fontWeight: 700, textDecoration: "none"
-                }}>{label}</a>
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "rgba(255,255,255,0.08)",
+                    color: "#FAFAF7",
+                    padding: "0.4rem 0.75rem",
+                    borderRadius: 3,
+                    fontSize: "0.72rem",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    transition: "background 0.2s ease",
+                  }}
+                >
+                  {label}
+                </a>
               ))}
             </div>
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid #333", paddingTop: "1.5rem", textAlign: "center", fontSize: "0.8rem", color: "#555" }}>
-          © {new Date().getFullYear()} Try Fabulous Foods. All rights reserved.
+        <div style={{
+          borderTop: "1px solid rgba(255,255,255,0.1)",
+          paddingTop: "1.5rem",
+          textAlign: "center",
+          fontSize: "0.78rem",
+          color: "#4F7A6B",
+        }}>
+          © {new Date().getFullYear()} Try Fabulous Foods. All rights reserved. · Virginia&apos;s Premier Event Food Truck
         </div>
       </div>
     </footer>

@@ -15,208 +15,476 @@ export default function Home() {
       <Navbar />
       <main>
 
-        {/* HERO */}
+        {/* ── HERO ── */}
         <section style={{
-          background: "linear-gradient(135deg, #1A1A1A 0%, #2d1a0a 60%, #1A1A1A 100%)",
-          minHeight: "90vh", display: "flex", alignItems: "center",
-          position: "relative", overflow: "hidden", padding: "4rem 1.5rem"
+          background: "#FAFAF7",
+          minHeight: "92vh",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          maxWidth: "100%",
+          overflow: "hidden",
+          position: "relative",
         }}>
-          {/* Flame accent */}
+          {/* Left: Content */}
           <div style={{
-            position: "absolute", right: "-80px", top: "-80px",
-            width: 500, height: 500, borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(217,79,0,0.25) 0%, transparent 70%)",
-            pointerEvents: "none"
-          }} />
-          <div style={{ maxWidth: 1100, margin: "0 auto", zIndex: 1, width: "100%" }}>
-            <div style={{ maxWidth: 700 }}>
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "5rem 3rem 5rem 8%",
+            gap: "1.5rem",
+          }}>
+            <span className="section-label">Virginia&apos;s #1 Event Food Truck</span>
+
+            <h1 style={{
+              fontFamily: "var(--font-display, 'Playfair Display', serif)",
+              fontSize: "clamp(2.4rem, 4.5vw, 4rem)",
+              fontWeight: 900,
+              color: "#1C1C18",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+            }}>
+              High-Volume<br />
+              Brick Oven Pizza<br />
+              <em style={{ color: "#C94E2A", fontStyle: "italic" }}>&amp; Seafood</em>
+            </h1>
+
+            <p style={{
+              fontSize: "1.05rem",
+              lineHeight: 1.75,
+              color: "#6B6860",
+              maxWidth: 440,
+              fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+            }}>
+              We cook fresh pizza in under 2 minutes and serve the freshest steamed seafood in Virginia — shrimp, snow crab legs, mussels, crawfish &amp; more.
+            </p>
+
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
+              <Link href="/contact" className="btn-primary">Check Availability</Link>
+              <Link href="/menu" className="btn-outline">View Menu</Link>
+            </div>
+
+            {/* Trust signals */}
+            <div style={{
+              display: "flex",
+              gap: "2rem",
+              marginTop: "1.5rem",
+              paddingTop: "1.5rem",
+              borderTop: "1px solid #E8DFD0",
+              flexWrap: "wrap",
+            }}>
+              {[
+                ["4+", "Years Serving VA"],
+                ["500+", "Events & Festivals"],
+                ["2 min", "Pizza Cook Time"],
+              ].map(([num, label]) => (
+                <div key={label}>
+                  <div style={{
+                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                    fontSize: "1.6rem",
+                    fontWeight: 800,
+                    color: "#1E3B2F",
+                    lineHeight: 1,
+                  }}>{num}</div>
+                  <div style={{
+                    fontSize: "0.72rem",
+                    color: "#6B6860",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    marginTop: "0.25rem",
+                    fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                  }}>{label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Visual Block */}
+          <div style={{ position: "relative", overflow: "hidden" }}>
+            {/* Forest green decorative panel */}
+            <div style={{
+              position: "absolute",
+              inset: 0,
+              background: "#1E3B2F",
+              clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0% 100%)",
+            }} />
+            {/* Gold accent */}
+            <div style={{
+              position: "absolute",
+              bottom: 0,
+              right: 0,
+              width: "60%",
+              height: "40%",
+              background: "#B8852A",
+              clipPath: "polygon(30% 100%, 100% 60%, 100% 100%)",
+              opacity: 0.9,
+            }} />
+            {/* Terracotta spot */}
+            <div style={{
+              position: "absolute",
+              top: "12%",
+              right: "10%",
+              width: 160,
+              height: 160,
+              borderRadius: "50%",
+              background: "#C94E2A",
+              opacity: 0.12,
+            }} />
+            {/* Center content inside the green panel */}
+            <div style={{
+              position: "relative",
+              zIndex: 2,
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              padding: "4rem 3rem 4rem 5rem",
+              gap: "2rem",
+            }}>
+              {/* Feature cards */}
+              {[
+                { icon: "🔥", label: "Brick Oven", desc: "Pizza cooked fresh in under 2 minutes" },
+                { icon: "🦞", label: "Fresh Shellfish", desc: "Crab legs, shrimp, mussels & more" },
+                { icon: "🎪", label: "Festival Ready", desc: "High-volume, all of Virginia" },
+              ].map(({ icon, label, desc }) => (
+                <div key={label} style={{
+                  background: "rgba(255,255,255,0.07)",
+                  backdropFilter: "blur(8px)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: 8,
+                  padding: "1.25rem 1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1.25rem",
+                }}>
+                  <span style={{ fontSize: "1.75rem" }}>{icon}</span>
+                  <div>
+                    <div style={{
+                      color: "#FAFAF7",
+                      fontWeight: 700,
+                      fontSize: "0.95rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>{label}</div>
+                    <div style={{
+                      color: "#9EB5A8",
+                      fontSize: "0.8rem",
+                      marginTop: "0.2rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>{desc}</div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Gold tagline block */}
               <div style={{
-                display: "inline-block", background: "#D94F00", color: "#fff",
-                fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase",
-                padding: "0.4rem 1rem", borderRadius: 2, marginBottom: "1.5rem", fontWeight: 700
+                background: "#B8852A",
+                borderRadius: 6,
+                padding: "1.25rem 1.5rem",
               }}>
-                Virginia&apos;s #1 Event Food Truck
-              </div>
-              <h1 style={{
-                color: "#FDF6EC", fontSize: "clamp(2rem, 5vw, 3.5rem)",
-                fontWeight: 900, lineHeight: 1.15, marginBottom: "1.5rem",
-                letterSpacing: "-0.5px"
-              }}>
-                High-Volume Brick Oven Pizza &amp; Seafood<br />
-                <span style={{ color: "#D94F00" }}>Built for Large Festivals &amp; Events</span>
-              </h1>
-              <p style={{
-                color: "#c4b49a", fontSize: "clamp(1rem, 2vw, 1.2rem)",
-                lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: 550
-              }}>
-                We cook fresh pizza in under 2 minutes and serve the freshest steamed seafood in Virginia — shrimp, snow crab legs, mussels, crawfish &amp; more.
-              </p>
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <Link href="/contact" style={{
-                  background: "#D94F00", color: "#fff", padding: "1rem 2rem",
-                  borderRadius: 4, textDecoration: "none", fontWeight: 700,
-                  fontSize: "1rem", letterSpacing: 1, textTransform: "uppercase"
+                <div style={{
+                  color: "#fff",
+                  fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  fontStyle: "italic",
                 }}>
-                  Check Availability
-                </Link>
-                <Link href="/menu" style={{
-                  background: "transparent", color: "#FDF6EC", padding: "1rem 2rem",
-                  borderRadius: 4, textDecoration: "none", fontWeight: 700,
-                  fontSize: "1rem", letterSpacing: 1, textTransform: "uppercase",
-                  border: "2px solid #C8872B"
-                }}>
-                  View Menu
-                </Link>
+                  &ldquo;Two full menus.<br />One incredible truck.&rdquo;
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Mobile hero fallback */}
+          <style>{`
+            @media (max-width: 768px) {
+              section:first-of-type {
+                grid-template-columns: 1fr !important;
+                min-height: auto !important;
+              }
+              section:first-of-type > div:last-child {
+                display: none !important;
+              }
+              section:first-of-type > div:first-child {
+                padding: 3rem 1.5rem !important;
+              }
+            }
+          `}</style>
         </section>
 
-        {/* STATS BAR */}
-        <section style={{ background: "#D94F00", padding: "1.5rem 1.5rem" }}>
+        {/* ── MARQUEE STRIP ── */}
+        <section style={{
+          background: "#C94E2A",
+          padding: "1.1rem 0",
+          overflow: "hidden",
+        }}>
           <div style={{
-            maxWidth: 1100, margin: "0 auto",
-            display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-            gap: "1rem", textAlign: "center"
+            display: "flex",
+            gap: "3rem",
+            animation: "none",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            maxWidth: 1140,
+            margin: "0 auto",
+            padding: "0 1.5rem",
           }}>
             {[
-              ["Pizza in", "Under 2 Min"],
-              ["Serving", "All of Virginia"],
-              ["Events", "Festivals, Corporate & Private"],
-              ["Menu", "Pizza + Seafood"],
-            ].map(([label, value]) => (
-              <div key={label}>
-                <div style={{ color: "#fff", fontWeight: 900, fontSize: "1.2rem" }}>{value}</div>
-                <div style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.75rem", letterSpacing: 2, textTransform: "uppercase" }}>{label}</div>
-              </div>
+              "🔥 Brick Oven Pizza in Under 2 Minutes",
+              "🦞 Freshest Steamed Seafood in Virginia",
+              "🎪 Festivals · Fairs · Corporate Events",
+              "📍 Serving All of Virginia",
+              "⭐ 4+ Years of Experience",
+            ].map((item) => (
+              <span key={item} style={{
+                color: "#fff",
+                fontSize: "0.8rem",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                whiteSpace: "nowrap",
+                fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              }}>
+                {item}
+              </span>
             ))}
           </div>
         </section>
 
-        {/* ABOUT */}
-        <section id="about" style={{ padding: "5rem 1.5rem", background: "#FDF6EC" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "3rem", alignItems: "center" }}>
+        {/* ── ABOUT ── */}
+        <section id="about" style={{ padding: "6rem 1.5rem", background: "#FAFAF7" }}>
+          <div style={{
+            maxWidth: 1140,
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "4rem",
+            alignItems: "center",
+          }}>
             <div>
-              <div style={{ color: "#D94F00", fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase", marginBottom: "0.75rem", fontWeight: 700 }}>Who We Are</div>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900, color: "#1A1A1A", marginBottom: "1.25rem", lineHeight: 1.2 }}>
-                Virginia&apos;s First Gourmet Brick Oven Pizza &amp; Seafood Truck
+              <span className="section-label">Who We Are</span>
+              <h2 style={{
+                fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
+                fontWeight: 800,
+                color: "#1C1C18",
+                lineHeight: 1.15,
+                marginBottom: "1.5rem",
+              }}>
+                Virginia&apos;s First Gourmet<br />
+                <em style={{ color: "#1E3B2F", fontStyle: "italic" }}>Brick Oven Pizza</em><br />
+                &amp; Seafood Truck
               </h2>
-              <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "1rem", fontSize: "1rem" }}>
+              <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "1rem", fontSize: "1rem" }}>
                 Try Fabulous Foods started with a vision: bring gourmet brick oven pizza and the freshest steamed seafood to events across Virginia.
               </p>
-              <p style={{ color: "#555", lineHeight: 1.8, marginBottom: "2rem", fontSize: "1rem" }}>
-                We invested in a custom-made brick oven that cooks pizzas in under 2 minutes — making us the perfect choice for high-volume festivals and events where speed and quality both matter.
+              <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2.5rem", fontSize: "1rem" }}>
+                We invested in a custom-made brick oven that cooks pizzas in under 2 minutes — making us the perfect choice for high-volume festivals where speed and quality both matter.
               </p>
-              <Link href="/contact" style={{
-                background: "#1A1A1A", color: "#fff", padding: "0.85rem 1.75rem",
-                borderRadius: 4, textDecoration: "none", fontWeight: 700,
-                fontSize: "0.9rem", letterSpacing: 1, textTransform: "uppercase"
-              }}>
-                Our History
-              </Link>
+              <Link href="/contact" className="btn-outline">Book an Event</Link>
             </div>
+
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
               {[
-                { icon: "🔥", title: "Brick Oven Speed", desc: "Pizza cooked fresh in under 2 minutes — perfect for high-volume events." },
-                { icon: "🦞", title: "Fresh Seafood", desc: "Shrimp, snow crab, mussels, crawfish & rotating specials." },
-                { icon: "🎪", title: "Event Ready", desc: "Equipped and experienced for festivals, fairs, and corporate events." },
-                { icon: "⭐", title: "Virginia-Wide", desc: "We travel statewide to bring the experience to you." },
+                { icon: "🔥", title: "Brick Oven Speed", desc: "Pizza fresh in under 2 minutes — perfect for high-volume events with thousands of guests." },
+                { icon: "🦞", title: "Fresh Seafood Daily", desc: "Shrimp, snow crab, mussels, crawfish & rotating seasonal specials." },
+                { icon: "🎪", title: "Event Specialists", desc: "Built and equipped for large festivals, fairs, corporate events & private parties." },
+                { icon: "🗺️", title: "Virginia-Wide", desc: "We travel statewide to bring the full experience directly to your event." },
               ].map(({ icon, title, desc }) => (
-                <div key={title} style={{
-                  background: "#fff", borderRadius: 8, padding: "1.25rem",
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)", border: "1px solid #eddcc8"
-                }}>
-                  <div style={{ fontSize: "1.8rem", marginBottom: "0.5rem" }}>{icon}</div>
-                  <div style={{ fontWeight: 700, color: "#1A1A1A", marginBottom: "0.4rem", fontSize: "0.9rem" }}>{title}</div>
-                  <div style={{ color: "#777", fontSize: "0.82rem", lineHeight: 1.5 }}>{desc}</div>
+                <div key={title} className="card" style={{ padding: "1.5rem 1.25rem" }}>
+                  <div style={{ fontSize: "1.6rem", marginBottom: "0.75rem" }}>{icon}</div>
+                  <div style={{
+                    fontWeight: 700,
+                    color: "#1C1C18",
+                    marginBottom: "0.5rem",
+                    fontSize: "0.92rem",
+                    fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                  }}>{title}</div>
+                  <div style={{ color: "#6B6860", fontSize: "0.82rem", lineHeight: 1.6 }}>{desc}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* MENU TEASER */}
-        <section style={{ background: "#1A1A1A", padding: "5rem 1.5rem" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-            <div style={{ color: "#C8872B", fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase", marginBottom: "0.75rem", fontWeight: 700 }}>What We Serve</div>
-            <h2 style={{ color: "#FDF6EC", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900, marginBottom: "1rem" }}>
-              Not Only Pizza — We Do Seafood, Too!
-            </h2>
-            <p style={{ color: "#888", maxWidth: 600, margin: "0 auto 3rem", lineHeight: 1.7, fontSize: "1rem" }}>
-              In addition to our brick oven pizza, we offer the freshest in steamed seafood. Two full menus, one incredible truck.
-            </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem", marginBottom: "3rem" }}>
-              {[
-                { title: "Try Fabulous Foods Menu", subtitle: "Brick Oven Pizza", items: ["Cheese Pizza", "Pepperoni Pizza", "Veggie Pizza", "Specialty Pies", "Garlic Knots", "& More Delicious Goodies"], color: "#D94F00" },
-                { title: "Salt Life Seafood Menu", subtitle: "Fresh Shellfish", items: ["Steamed Shrimp", "Snow Crab Legs", "Mussels", "Crawfish", "Soft Crab Sandwiches", "Seafood Gumbo & Oyster Chowder"], color: "#1B6B6B" },
-              ].map(({ title, subtitle, items, color }) => (
-                <div key={title} style={{
-                  background: "#222", borderRadius: 8, padding: "2rem",
-                  border: `2px solid ${color}`, textAlign: "left"
-                }}>
-                  <div style={{ color, fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase", marginBottom: "0.5rem", fontWeight: 700 }}>{subtitle}</div>
-                  <h3 style={{ color: "#FDF6EC", fontWeight: 800, fontSize: "1.2rem", marginBottom: "1.25rem" }}>{title}</h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                    {items.map(item => (
-                      <li key={item} style={{ color: "#aaa", fontSize: "0.9rem", padding: "0.35rem 0", borderBottom: "1px solid #333", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <span style={{ color, fontSize: "0.6rem" }}>●</span> {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+        {/* ── MENU TEASER ── */}
+        <section style={{ background: "#F2EDE3", padding: "6rem 1.5rem" }}>
+          <div style={{ maxWidth: 1140, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+              <span className="section-label">What We Serve</span>
+              <h2 style={{
+                fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                fontSize: "clamp(1.9rem, 3vw, 2.75rem)",
+                fontWeight: 800,
+                color: "#1C1C18",
+                marginBottom: "1rem",
+              }}>
+                Not Only Pizza — We Do Seafood, Too.
+              </h2>
+              <p style={{ color: "#6B6860", maxWidth: 560, margin: "0 auto", lineHeight: 1.75, fontSize: "1rem" }}>
+                Two full menus, one incredible truck. Choose one or let us serve both at your event.
+              </p>
             </div>
-            <Link href="/menu" style={{
-              background: "#D94F00", color: "#fff", padding: "1rem 2.5rem",
-              borderRadius: 4, textDecoration: "none", fontWeight: 700,
-              fontSize: "1rem", letterSpacing: 1, textTransform: "uppercase"
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "1.5rem",
+              marginBottom: "3rem",
             }}>
-              Full Menu
-            </Link>
+              {[
+                {
+                  title: "Try Fabulous Foods Menu",
+                  subtitle: "Brick Oven Pizza",
+                  accent: "#C94E2A",
+                  items: ["Cheese Pizza", "Pepperoni Pizza", "Veggie Pizza", "Specialty Pies", "Garlic Knots", "& More Delicious Goodies"],
+                },
+                {
+                  title: "Salt Life Seafood Menu",
+                  subtitle: "Fresh Shellfish",
+                  accent: "#1B5E52",
+                  items: ["Steamed Shrimp", "Snow Crab Legs", "Mussels", "Crawfish", "Soft Crab Sandwiches", "Seafood Gumbo & Oyster Chowder"],
+                },
+              ].map(({ title, subtitle, accent, items }) => (
+                <div key={title} style={{
+                  background: "#FAFAF7",
+                  borderRadius: 8,
+                  overflow: "hidden",
+                  border: "1px solid #E8DFD0",
+                  boxShadow: "0 4px 24px rgba(30,59,47,0.06)",
+                }}>
+                  {/* Top color bar */}
+                  <div style={{ background: accent, height: 5 }} />
+                  <div style={{ padding: "2rem 1.75rem" }}>
+                    <div style={{
+                      color: accent,
+                      fontSize: "0.68rem",
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      fontWeight: 600,
+                      marginBottom: "0.4rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>{subtitle}</div>
+                    <h3 style={{
+                      fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                      color: "#1C1C18",
+                      fontWeight: 800,
+                      fontSize: "1.25rem",
+                      marginBottom: "1.5rem",
+                    }}>{title}</h3>
+                    <ul style={{ listStyle: "none", padding: 0 }}>
+                      {items.map(item => (
+                        <li key={item} style={{
+                          color: "#6B6860",
+                          fontSize: "0.92rem",
+                          padding: "0.5rem 0",
+                          borderBottom: "1px solid #EDE8E0",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "0.6rem",
+                          fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                        }}>
+                          <span style={{ color: accent, fontSize: "0.5rem", flexShrink: 0 }}>◆</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ textAlign: "center" }}>
+              <Link href="/menu" className="btn-primary">See Full Menu</Link>
+            </div>
           </div>
         </section>
 
-        {/* REVIEWS */}
-        <section style={{ background: "#FDF6EC", padding: "5rem 1.5rem" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <div style={{ color: "#D94F00", fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase", marginBottom: "0.75rem", fontWeight: 700 }}>What People Say</div>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900, color: "#1A1A1A" }}>Reviews From Our Customers</h2>
+        {/* ── REVIEWS ── */}
+        <section style={{ background: "#FAFAF7", padding: "6rem 1.5rem" }}>
+          <div style={{ maxWidth: 1140, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+              <span className="section-label">What People Say</span>
+              <h2 style={{
+                fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                fontSize: "clamp(1.9rem, 3vw, 2.75rem)",
+                fontWeight: 800,
+                color: "#1C1C18",
+              }}>
+                Reviews from Our Customers
+              </h2>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "1.25rem",
+            }}>
               {reviews.map(({ name, text, stars }) => (
-                <div key={name} style={{
-                  background: "#fff", borderRadius: 8, padding: "1.75rem",
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)", border: "1px solid #eddcc8"
-                }}>
-                  <div style={{ color: "#D94F00", fontSize: "1.1rem", marginBottom: "0.75rem" }}>{"★".repeat(stars)}</div>
-                  <p style={{ color: "#555", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "1rem", fontStyle: "italic" }}>&ldquo;{text}&rdquo;</p>
-                  <div style={{ fontWeight: 700, color: "#1A1A1A", fontSize: "0.85rem" }}>— {name}</div>
+                <div key={name} className="card" style={{ padding: "1.75rem" }}>
+                  <div style={{ color: "#C94E2A", fontSize: "1rem", marginBottom: "1rem", letterSpacing: "0.1em" }}>
+                    {"★".repeat(stars)}
+                  </div>
+                  <p style={{
+                    color: "#4A4A44",
+                    fontSize: "0.92rem",
+                    lineHeight: 1.75,
+                    marginBottom: "1.25rem",
+                    fontStyle: "italic",
+                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                  }}>
+                    &ldquo;{text}&rdquo;
+                  </p>
+                  <div style={{
+                    fontWeight: 700,
+                    color: "#1C1C18",
+                    fontSize: "0.82rem",
+                    letterSpacing: "0.05em",
+                    fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                  }}>
+                    — {name}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* SOCIAL / FIND US */}
-        <section id="events" style={{ background: "#2d1a0a", padding: "5rem 1.5rem" }}>
-          <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-            <div style={{ color: "#C8872B", fontSize: "0.7rem", letterSpacing: 3, textTransform: "uppercase", marginBottom: "0.75rem", fontWeight: 700 }}>Follow The Truck</div>
-            <h2 style={{ color: "#FDF6EC", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900, marginBottom: "1rem" }}>Find Us on Social Media</h2>
-            <p style={{ color: "#aaa", lineHeight: 1.7, marginBottom: "2.5rem", fontSize: "1rem" }}>
-              We post our schedule, upcoming events, and specials on Facebook, Instagram, and TikTok. Give us a follow to know where we&apos;ll be next!
+        {/* ── FIND US (Social) ── */}
+        <section id="events" style={{ background: "#1E3B2F", padding: "6rem 1.5rem" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+            <span style={{ ...({} as object), display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.75rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+              Follow The Truck
+            </span>
+            <h2 style={{
+              fontFamily: "var(--font-display, 'Playfair Display', serif)",
+              color: "#FAFAF7",
+              fontSize: "clamp(1.9rem, 3vw, 2.75rem)",
+              fontWeight: 800,
+              marginBottom: "1.25rem",
+            }}>
+              Find Us on Social Media
+            </h2>
+            <p style={{ color: "#7A9E90", lineHeight: 1.8, marginBottom: "2.5rem", fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+              We post our schedule, upcoming events, and specials on Facebook, Instagram, and TikTok. Follow us to know where we&apos;ll be next!
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               {[
-                { label: "Facebook", href: "https://www.facebook.com", bg: "#1877F2" },
-                { label: "Instagram", href: "https://www.instagram.com", bg: "#E1306C" },
-                { label: "TikTok", href: "https://www.tiktok.com/@tryfabulousfoodsva", bg: "#010101" },
-                { label: "Yelp", href: "https://www.yelp.com", bg: "#D32323" },
+                { label: "Facebook", href: "https://www.facebook.com", bg: "#2C5F8A" },
+                { label: "Instagram", href: "https://www.instagram.com", bg: "#9B3A6E" },
+                { label: "TikTok", href: "https://www.tiktok.com/@tryfabulousfoodsva", bg: "#2C3E2D" },
+                { label: "Yelp", href: "https://www.yelp.com", bg: "#8B2B1A" },
               ].map(({ label, href, bg }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
-                  background: bg, color: "#fff", padding: "0.75rem 1.5rem",
-                  borderRadius: 4, textDecoration: "none", fontWeight: 700,
-                  fontSize: "0.9rem", letterSpacing: 1
+                  background: bg,
+                  color: "#fff",
+                  padding: "0.75rem 1.75rem",
+                  borderRadius: 4,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                  fontSize: "0.88rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  transition: "transform 0.2s ease",
                 }}>
                   {label}
                 </a>
@@ -225,22 +493,69 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section style={{ background: "#D94F00", padding: "4rem 1.5rem", textAlign: "center" }}>
-          <div style={{ maxWidth: 700, margin: "0 auto" }}>
-            <h2 style={{ color: "#fff", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 900, marginBottom: "1rem" }}>
-              Ready to Book Try Fabulous Foods?
-            </h2>
-            <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1rem", marginBottom: "2rem", lineHeight: 1.7 }}>
-              Whether it&apos;s a festival, corporate event, or private party — we bring the brick oven to you. Check availability today.
-            </p>
-            <Link href="/contact" style={{
-              background: "#fff", color: "#D94F00", padding: "1rem 2.5rem",
-              borderRadius: 4, textDecoration: "none", fontWeight: 800,
-              fontSize: "1rem", letterSpacing: 1, textTransform: "uppercase"
-            }}>
-              Check Availability
-            </Link>
+        {/* ── BOOKING CTA ── */}
+        <section style={{ background: "#F2EDE3", padding: "6rem 1.5rem" }}>
+          <div style={{
+            maxWidth: 1140,
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "3rem",
+            alignItems: "center",
+          }}>
+            <div>
+              <span className="section-label">Ready to Book?</span>
+              <h2 style={{
+                fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                fontWeight: 800,
+                color: "#1C1C18",
+                lineHeight: 1.15,
+                marginBottom: "1.25rem",
+              }}>
+                Bring Try Fabulous Foods<br />
+                <em style={{ color: "#C94E2A", fontStyle: "italic" }}>to Your Event</em>
+              </h2>
+              <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2rem", fontSize: "1rem", maxWidth: 440 }}>
+                Whether it&apos;s a festival, corporate event, or private party — we bring the brick oven to you. Serving all of Virginia.
+              </p>
+              <Link href="/contact" className="btn-primary">Check Availability</Link>
+            </div>
+
+            {/* Feature grid */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              {[
+                ["🎪", "Large Festivals & Fairs", "High-volume service built to feed thousands"],
+                ["🏢", "Corporate Events", "Professional setup, reliable execution"],
+                ["🎉", "Private Parties", "Customizable menus for any occasion"],
+              ].map(([icon, title, desc]) => (
+                <div key={title as string} style={{
+                  background: "#FAFAF7",
+                  borderRadius: 6,
+                  padding: "1.25rem 1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1.25rem",
+                  border: "1px solid #E8DFD0",
+                }}>
+                  <span style={{ fontSize: "1.5rem", flexShrink: 0 }}>{icon}</span>
+                  <div>
+                    <div style={{
+                      fontWeight: 700,
+                      color: "#1C1C18",
+                      fontSize: "0.95rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>{title}</div>
+                    <div style={{
+                      color: "#6B6860",
+                      fontSize: "0.82rem",
+                      marginTop: "0.2rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>{desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
