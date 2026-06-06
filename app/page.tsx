@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import VideoEmbed from "@/components/VideoEmbed";
 
 const reviews = [
   { name: "Sarah M.", text: "Best pizza I've ever had at a festival! The brick oven makes all the difference — hot, fresh, incredible crust in under 2 minutes.", stars: 5 },
@@ -296,25 +297,12 @@ export default function Home() {
                   fontSize: "1.05rem",
                 }}>Live at a Virginia Event</span>
               </div>
-              <div style={{
-                borderRadius: 8,
-                boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
-                overflow: "hidden",
-                width: "100%",
-              }}>
-                <iframe
-                  src="https://www.youtube.com/embed/wpktzN7mdAk?rel=0&modestbranding=1"
-                  title="Virginia's First Brick Oven Food Truck at a Live Event"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    aspectRatio: "16/9",
-                    border: "none",
-                  }}
-                />
-              </div>
+              <VideoEmbed
+                src="https://www.youtube.com/embed/wpktzN7mdAk?rel=0&modestbranding=1"
+                title="Virginia's First Brick Oven Food Truck at a Live Event"
+                platform="youtube"
+                youtubeId="wpktzN7mdAk"
+              />
               <p style={{
                 color: "#6B6860",
                 fontSize: "0.88rem",
@@ -342,25 +330,12 @@ export default function Home() {
                   fontSize: "1.05rem",
                 }}>Behind the Scenes</span>
               </div>
-              <div style={{
-                borderRadius: 8,
-                boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
-                overflow: "hidden",
-                width: "100%",
-              }}>
-                <iframe
-                  src="https://www.youtube.com/embed/g4umNXvAWiw?rel=0&modestbranding=1"
-                  title="Mobile Brick Oven Pizza Truck in Virginia — Behind the Scenes"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    aspectRatio: "16/9",
-                    border: "none",
-                  }}
-                />
-              </div>
+              <VideoEmbed
+                src="https://www.youtube.com/embed/g4umNXvAWiw?rel=0&modestbranding=1"
+                title="Mobile Brick Oven Pizza Truck in Virginia — Behind the Scenes"
+                platform="youtube"
+                youtubeId="g4umNXvAWiw"
+              />
               <p style={{
                 color: "#6B6860",
                 fontSize: "0.88rem",
@@ -416,29 +391,11 @@ export default function Home() {
                     fontSize: "1.05rem",
                   }}>Tray&apos;s Testimonial</span>
                 </div>
-                <div style={{
-                  borderRadius: 8,
-                  boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
-                  overflow: "hidden",
-                  width: "100%",
-                  position: "relative",
-                  paddingTop: "56.25%",
-                }}>
-                  <iframe
-                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfRK086YG%2F&show_text=false&width=560"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: "none",
-                    }}
-                    scrolling="no"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+                <VideoEmbed
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfRK086YG%2F&show_text=false&width=560"
+                  title="Tray's Testimonial — Try Fabulous Foods"
+                  platform="facebook"
+                />
                 <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
                   Hear it straight from Tray — a loyal customer sharing his honest experience with our food.
                 </p>
@@ -460,29 +417,11 @@ export default function Home() {
                     fontSize: "1.05rem",
                   }}>Live at Culpeper Rodeo 2025</span>
                 </div>
-                <div style={{
-                  borderRadius: 8,
-                  boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
-                  overflow: "hidden",
-                  width: "100%",
-                  position: "relative",
-                  paddingTop: "56.25%",
-                }}>
-                  <iframe
-                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfTf67wLW%2F&show_text=false&width=560"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: "none",
-                    }}
-                    scrolling="no"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+                <VideoEmbed
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfTf67wLW%2F&show_text=false&width=560"
+                  title="Live at Culpeper Rodeo 2025 — Try Fabulous Foods"
+                  platform="facebook"
+                />
                 <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
                   Catch us live at the Culpeper Rodeo 2025 — fresh pizza and steamed seafood right at the event.
                 </p>
