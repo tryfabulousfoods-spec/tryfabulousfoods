@@ -280,7 +280,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Featured video: 4-Year Journey */}
+            {/* Featured video: Live at a Virginia Event */}
             <div style={{ marginBottom: "2.5rem" }}>
               <div style={{
                 display: "flex",
@@ -294,7 +294,7 @@ export default function Home() {
                   fontWeight: 700,
                   color: "#1C1C18",
                   fontSize: "1.05rem",
-                }}>Our Story — 4 Years Across Virginia</span>
+                }}>Live at a Virginia Event</span>
               </div>
               <div style={{
                 borderRadius: 8,
@@ -303,8 +303,8 @@ export default function Home() {
                 width: "100%",
               }}>
                 <iframe
-                  src="https://www.youtube.com/embed/ibInwz7c2EE?rel=0&modestbranding=1"
-                  title="Try Fabulous Foods — 4 Years Across Virginia"
+                  src="https://www.youtube.com/embed/wpktzN7mdAk?rel=0&modestbranding=1"
+                  title="Virginia's First Brick Oven Food Truck at a Live Event"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   style={{
@@ -322,96 +322,54 @@ export default function Home() {
                 lineHeight: 1.65,
                 fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
               }}>
-                4 years. Across Virginia. One food truck. Watch us trace our journey serving brick oven pizza and fresh seafood at events across the Commonwealth — from local fairs to major festivals.
+                Virginia&apos;s first brick oven food truck, fully operational at a live event — 80 to 110 fresh pizzas per hour, dual windows, zero slowdown.
               </p>
             </div>
 
-            {/* 2-video grid */}
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "2rem",
-              marginBottom: "3rem",
-            }}>
-              {/* Live Event */}
-              <div>
-                <div style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.75rem",
-                  marginBottom: "1rem",
-                }}>
-                  <span style={{ background: "#1E3B2F", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
-                  <span style={{
-                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
-                    fontWeight: 700,
-                    color: "#1C1C18",
-                    fontSize: "0.98rem",
-                  }}>Live at a Virginia Event</span>
-                </div>
-                <div style={{
-                  borderRadius: 8,
-                  boxShadow: "0 4px 24px rgba(30,59,47,0.1)",
-                  overflow: "hidden",
-                  width: "100%",
-                }}>
-                  <iframe
-                    src="https://www.youtube.com/embed/wpktzN7mdAk?rel=0&modestbranding=1"
-                    title="Virginia's First Brick Oven Food Truck at a Live Event"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      aspectRatio: "16/9",
-                      border: "none",
-                    }}
-                  />
-                </div>
-                <p style={{ color: "#6B6860", fontSize: "0.83rem", marginTop: "0.75rem", lineHeight: 1.6, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  Virginia&apos;s first brick oven food truck, fully operational at a live event — 80 to 110 fresh pizzas per hour, dual windows, zero slowdown.
-                </p>
+            {/* Behind the Scenes */}
+            <div style={{ marginBottom: "3rem" }}>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem",
+                marginBottom: "1rem",
+              }}>
+                <span style={{ background: "#B8852A", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
+                <span style={{
+                  fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                  fontWeight: 700,
+                  color: "#1C1C18",
+                  fontSize: "1.05rem",
+                }}>Behind the Scenes</span>
               </div>
-
-              {/* Behind the Scenes */}
-              <div>
-                <div style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.75rem",
-                  marginBottom: "1rem",
-                }}>
-                  <span style={{ background: "#B8852A", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
-                  <span style={{
-                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
-                    fontWeight: 700,
-                    color: "#1C1C18",
-                    fontSize: "0.98rem",
-                  }}>Behind the Scenes</span>
-                </div>
-                <div style={{
-                  borderRadius: 8,
-                  boxShadow: "0 4px 24px rgba(30,59,47,0.1)",
-                  overflow: "hidden",
-                  width: "100%",
-                }}>
-                  <iframe
-                    src="https://www.youtube.com/embed/g4umNXvAWiw?rel=0&modestbranding=1"
-                    title="Mobile Brick Oven Pizza Truck in Virginia — Behind the Scenes"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      aspectRatio: "16/9",
-                      border: "none",
-                    }}
-                  />
-                </div>
-                <p style={{ color: "#6B6860", fontSize: "0.83rem", marginTop: "0.75rem", lineHeight: 1.6, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  Go behind the scenes — watch our team handle a full service operation, from firing up the brick oven to plating fresh seafood orders on the fly.
-                </p>
+              <div style={{
+                borderRadius: 8,
+                boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
+                overflow: "hidden",
+                width: "100%",
+              }}>
+                <iframe
+                  src="https://www.youtube.com/embed/g4umNXvAWiw?rel=0&modestbranding=1"
+                  title="Mobile Brick Oven Pizza Truck in Virginia — Behind the Scenes"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    aspectRatio: "16/9",
+                    border: "none",
+                  }}
+                />
               </div>
+              <p style={{
+                color: "#6B6860",
+                fontSize: "0.88rem",
+                marginTop: "0.85rem",
+                lineHeight: 1.65,
+                fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              }}>
+                Go behind the scenes — watch our team handle a full service operation, from firing up the brick oven to plating fresh seafood orders on the fly.
+              </p>
             </div>
 
             {/* View all on YouTube */}
@@ -426,39 +384,6 @@ export default function Home() {
               </a>
             </div>
 
-            {/* ── Fan & Blogger Videos ── */}
-            <div style={{ marginTop: "4rem", borderTop: "1px solid rgba(30,59,47,0.12)", paddingTop: "3.5rem" }}>
-              <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-                <span style={{ display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.6rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  Real People. Real Reactions.
-                </span>
-                <h3 style={{ fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 700, color: "#1C1C18", fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)", marginBottom: "0.75rem" }}>
-                  Fans, Foodies & Bloggers Weigh In
-                </h3>
-                <p style={{ color: "#6B6860", fontSize: "0.9rem", lineHeight: 1.75, maxWidth: 520, margin: "0 auto" }}>
-                  Don&apos;t take our word for it. Here&apos;s what real customers and food influencers had to say straight from the event.
-                </p>
-              </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.25rem" }}>
-                {[
-                  { label: "Tray's Testimonial", desc: "Hear Tray break down our famous Crab Bombs — his reaction says it all.", href: "https://www.facebook.com/share/r/14dxpZn1h71/?mibextid=wwXIfr" },
-                  { label: "Food Blogger Spotlight", desc: "A food influencer digs into our Crab Imperial Fries and gives the real verdict.", href: "https://www.facebook.com/share/r/1DAepWVsLW/?mibextid=wwXIfr" },
-                  { label: "Influencer Review #2", desc: "Another foodie influencer hits the truck and reviews the full experience.", href: "https://www.facebook.com/share/r/18naWhGGsi/?mibextid=wwXIfr" },
-                  { label: "Influencer Review #3", desc: "One more fan favorite — straight from the event, straight to you.", href: "https://www.facebook.com/share/r/18mmA4vwYg/?mibextid=wwXIfr" },
-                ].map(({ label, desc, href }) => (
-                  <div key={label} style={{ background: "#1E3B2F", border: "1px solid rgba(30,59,47,0.15)", borderRadius: 8, padding: "2rem 1.5rem", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <div style={{ width: 54, height: 54, background: "#C94E2A", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem", flexShrink: 0 }}>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ marginLeft: 3 }}><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    </div>
-                    <h4 style={{ color: "#FAFAF7", fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 700, fontSize: "0.98rem", marginBottom: "0.65rem" }}>{label}</h4>
-                    <p style={{ color: "#7A9E90", fontSize: "0.83rem", lineHeight: 1.7, marginBottom: "1.4rem", flexGrow: 1 }}>{desc}</p>
-                    <a href={href} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1877F2", color: "#fff", padding: "0.65rem 1.5rem", borderRadius: 4, fontWeight: 700, fontSize: "0.78rem", letterSpacing: "0.07em", textTransform: "uppercase", textDecoration: "none", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                      Watch on Facebook
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
 
           </div>
         </section>
