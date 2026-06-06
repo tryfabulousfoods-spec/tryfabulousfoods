@@ -446,48 +446,53 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FIND US (Social) ── */}
-        <section id="events" style={{ background: "#1E3B2F", padding: "6rem 1.5rem" }}>
-          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
-            <span style={{ ...({} as object), display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.75rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-              Follow The Truck
+        {/* ── FOLLOW US ── */}
+        <section style={{ background: "#1E3B2F", padding: "5rem 1.5rem" }}>
+          <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
+            <span style={{ display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.75rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+              Stay Connected
             </span>
             <h2 style={{
               fontFamily: "var(--font-display, 'Playfair Display', serif)",
               color: "#FAFAF7",
-              fontSize: "clamp(1.9rem, 3vw, 2.75rem)",
+              fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
               fontWeight: 800,
               marginBottom: "1.25rem",
             }}>
-              Find Us on Social Media
+              Want to Know Where We&apos;ll Be?
             </h2>
-            <p style={{ color: "#7A9E90", lineHeight: 1.8, marginBottom: "2.5rem", fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-              We post our schedule, upcoming events, and specials on Facebook, Instagram, and TikTok. Follow us to know where we&apos;ll be next!
+            <p style={{ color: "#7A9E90", lineHeight: 1.85, marginBottom: "2.5rem", fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+              Stay tuned to our Facebook and Instagram pages — we update them every week with where we&apos;ll be. Give us a follow and we&apos;ll keep you in the loop!
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              {[
-                { label: "Facebook", href: "https://www.facebook.com", bg: "#2C5F8A" },
-                { label: "Instagram", href: "https://www.instagram.com", bg: "#9B3A6E" },
-                { label: "TikTok", href: "https://www.tiktok.com/@tryfabulousfoodsva", bg: "#2C3E2D" },
-                { label: "Yelp", href: "https://www.yelp.com", bg: "#8B2B1A" },
-              ].map(({ label, href, bg }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
-                  background: bg,
-                  color: "#fff",
-                  padding: "0.75rem 1.75rem",
-                  borderRadius: 4,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                  fontSize: "0.88rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                  border: "1px solid rgba(255,255,255,0.15)",
-                  transition: "transform 0.2s ease",
-                }}>
-                  {label}
-                </a>
-              ))}
+              <a href="https://www.facebook.com/tryfabulousfoods" target="_blank" rel="noopener noreferrer" style={{
+                background: "#2C5F8A",
+                color: "#fff",
+                padding: "0.85rem 2rem",
+                borderRadius: 4,
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "0.88rem",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              }}>
+                Follow on Facebook
+              </a>
+              <a href="https://www.instagram.com/tryfabulousfoods" target="_blank" rel="noopener noreferrer" style={{
+                background: "#9B3A6E",
+                color: "#fff",
+                padding: "0.85rem 2rem",
+                borderRadius: 4,
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "0.88rem",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              }}>
+                Follow on Instagram
+              </a>
             </div>
           </div>
         </section>

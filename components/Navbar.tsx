@@ -27,7 +27,6 @@ export default function Navbar() {
   const links = [
     { href: "/#about", label: "About" },
     { href: "/menu", label: "Menu" },
-    { href: "/#events", label: "Find Us" },
     { href: "/contact", label: "Contact" },
   ];
 
