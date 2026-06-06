@@ -405,7 +405,6 @@ export default function Home() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "0.5rem" }}>
               {[
                 "1AH-RbkVvnCJ9gxNwVCyqxMcqT7-i2S7j",
-                "1fyukySt9UNUJffQzysbLi552r9_H3B8c",
                 "1y2aOXeV7utzY85ppiP_yLtpoMOvua53I",
                 "1ONrj20oaDDc_gbNtE3ufWXxBoIwDA353",
                 "1zatuXBmLUR3ZLGqGZAClsZ1iCIgu6INr",
