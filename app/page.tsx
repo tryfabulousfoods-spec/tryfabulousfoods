@@ -443,6 +443,50 @@ export default function Home() {
                   Hear it straight from Tray — a loyal customer sharing his honest experience with our food.
                 </p>
               </div>
+
+              {/* Food Blogger */}
+              <div style={{ marginBottom: "2rem" }}>
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  marginBottom: "1rem",
+                }}>
+                  <span style={{ background: "#B8852A", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
+                  <span style={{
+                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                    fontWeight: 700,
+                    color: "#1C1C18",
+                    fontSize: "1.05rem",
+                  }}>Food Blogger Review</span>
+                </div>
+                <div style={{
+                  borderRadius: 8,
+                  boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
+                  overflow: "hidden",
+                  width: "100%",
+                  position: "relative",
+                  paddingTop: "56.25%",
+                }}>
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1GtDqM1S9w%2F&show_text=false&width=560"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                    scrolling="no"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                  A food blogger stops by the truck and gives her honest take — straight from the event.
+                </p>
+              </div>
             </div>
 
           </div>
