@@ -303,99 +303,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── MENU TEASER ── */}
-        <section style={{ background: "#F2EDE3", padding: "6rem 1.5rem" }}>
-          <div style={{ maxWidth: 1140, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span className="section-label">What We Serve</span>
-              <h2 style={{
-                fontFamily: "var(--font-display, 'Playfair Display', serif)",
-                fontSize: "clamp(1.9rem, 3vw, 2.75rem)",
-                fontWeight: 800,
-                color: "#1C1C18",
-                marginBottom: "1rem",
-              }}>
-                Not Only Pizza — We Do Seafood, Too.
-              </h2>
-              <p style={{ color: "#6B6860", maxWidth: 560, margin: "0 auto", lineHeight: 1.75, fontSize: "1rem" }}>
-                Two full menus, one incredible truck. Choose one or let us serve both at your event.
-              </p>
-            </div>
-
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "1.5rem",
-              marginBottom: "3rem",
-            }}>
-              {[
-                {
-                  title: "Try Fabulous Foods Menu",
-                  subtitle: "Brick Oven Pizza",
-                  accent: "#C94E2A",
-                  items: ["Cheese Pizza", "Pepperoni Pizza", "Veggie Pizza", "Specialty Pies", "Garlic Knots", "& More Delicious Goodies"],
-                },
-                {
-                  title: "Salt Life Seafood Menu",
-                  subtitle: "Fresh Shellfish",
-                  accent: "#1B5E52",
-                  items: ["Steamed Shrimp", "Snow Crab Legs", "Mussels", "Crawfish", "Soft Crab Sandwiches", "Seafood Gumbo & Oyster Chowder"],
-                },
-              ].map(({ title, subtitle, accent, items }) => (
-                <div key={title} style={{
-                  background: "#FAFAF7",
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  border: "1px solid #E8DFD0",
-                  boxShadow: "0 4px 24px rgba(30,59,47,0.06)",
-                }}>
-                  {/* Top color bar */}
-                  <div style={{ background: accent, height: 5 }} />
-                  <div style={{ padding: "2rem 1.75rem" }}>
-                    <div style={{
-                      color: accent,
-                      fontSize: "0.68rem",
-                      letterSpacing: "0.2em",
-                      textTransform: "uppercase",
-                      fontWeight: 600,
-                      marginBottom: "0.4rem",
-                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                    }}>{subtitle}</div>
-                    <h3 style={{
-                      fontFamily: "var(--font-display, 'Playfair Display', serif)",
-                      color: "#1C1C18",
-                      fontWeight: 800,
-                      fontSize: "1.25rem",
-                      marginBottom: "1.5rem",
-                    }}>{title}</h3>
-                    <ul style={{ listStyle: "none", padding: 0 }}>
-                      {items.map(item => (
-                        <li key={item} style={{
-                          color: "#6B6860",
-                          fontSize: "0.92rem",
-                          padding: "0.5rem 0",
-                          borderBottom: "1px solid #EDE8E0",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "0.6rem",
-                          fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                        }}>
-                          <span style={{ color: accent, fontSize: "0.5rem", flexShrink: 0 }}>◆</span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ textAlign: "center" }}>
-              <Link href="/menu" className="btn-primary">See Full Menu</Link>
-            </div>
-          </div>
-        </section>
-
         {/* ── VIDEOS ── */}
         <section id="videos" style={{ background: "#F2EDE3", padding: "6rem 1.5rem" }}>
           <div style={{ maxWidth: 1140, margin: "0 auto" }}>
@@ -709,6 +616,176 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── TRUST & ACCREDITATION ── */}
+        <section style={{ background: "#F2EDE3", padding: "5.5rem 1.5rem" }}>
+          <div style={{ maxWidth: 1140, margin: "0 auto", textAlign: "center" }}>
+            <span className="section-label">Accredited &amp; Verified</span>
+            <h2 style={{
+              fontFamily: "var(--font-display, 'Playfair Display', serif)",
+              fontSize: "clamp(1.9rem, 3vw, 2.6rem)",
+              fontWeight: 800,
+              color: "#1C1C18",
+              marginBottom: "0.85rem",
+            }}>
+              You Can Trust What You Order
+            </h2>
+            <p style={{ color: "#6B6860", maxWidth: 520, margin: "0 auto 3.5rem", lineHeight: 1.8, fontSize: "0.98rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+              We hold ourselves to the highest standards — from the food we serve to the way we run our business.
+            </p>
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "2rem",
+              maxWidth: 760,
+              margin: "0 auto",
+            }}>
+
+              {/* ── BBB Accredited Business ── */}
+              <a href="https://www.bbb.org/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                <div style={{
+                  background: "#fff",
+                  border: "2px solid #E8DFD0",
+                  borderRadius: 12,
+                  padding: "2.5rem 2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "1.1rem",
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                }}>
+                  {/* BBB Seal */}
+                  <div style={{
+                    width: 88,
+                    height: 88,
+                    background: "#003F87",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    boxShadow: "0 4px 16px rgba(0,63,135,0.25)",
+                  }}>
+                    <span style={{
+                      color: "#fff",
+                      fontWeight: 900,
+                      fontSize: "1.75rem",
+                      fontFamily: "serif",
+                      letterSpacing: "-0.04em",
+                    }}>BBB</span>
+                  </div>
+                  <div>
+                    <div style={{
+                      fontWeight: 800,
+                      color: "#003F87",
+                      fontSize: "1.05rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                      marginBottom: "0.3rem",
+                    }}>
+                      BBB Accredited Business
+                    </div>
+                    <div style={{
+                      color: "#6B6860",
+                      fontSize: "0.82rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>
+                      Better Business Bureau
+                    </div>
+                  </div>
+                  <div style={{
+                    fontSize: "0.75rem",
+                    color: "#003F87",
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    opacity: 0.7,
+                  }}>
+                    Accredited ✓
+                  </div>
+                </div>
+              </a>
+
+              {/* ── BOB Verified ── */}
+              <a href="https://bobverified.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                <div style={{
+                  background: "#fff",
+                  border: "2px solid #E8DFD0",
+                  borderRadius: 12,
+                  padding: "2.5rem 2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "1.1rem",
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                }}>
+                  {/* BOB Seal */}
+                  <div style={{
+                    width: 88,
+                    height: 88,
+                    background: "#1E3B2F",
+                    borderRadius: "50%",
+                    border: "3px solid #B8852A",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    boxShadow: "0 4px 16px rgba(30,59,47,0.25)",
+                    gap: "0.1rem",
+                  }}>
+                    <span style={{
+                      color: "#B8852A",
+                      fontWeight: 900,
+                      fontSize: "1.3rem",
+                      fontFamily: "serif",
+                      lineHeight: 1,
+                    }}>BOB</span>
+                    <span style={{
+                      color: "#FAFAF7",
+                      fontSize: "0.48rem",
+                      fontWeight: 600,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>VERIFIED</span>
+                  </div>
+                  <div>
+                    <div style={{
+                      fontWeight: 800,
+                      color: "#1E3B2F",
+                      fontSize: "1.05rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                      marginBottom: "0.3rem",
+                    }}>
+                      Best.Of.Best <span style={{ color: "#B8852A" }}>Verified ✓</span>
+                    </div>
+                    <div style={{
+                      color: "#6B6860",
+                      fontSize: "0.82rem",
+                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    }}>
+                      Virginia&apos;s Mobile Food Vendor Platform
+                    </div>
+                  </div>
+                  <div style={{
+                    fontSize: "0.75rem",
+                    color: "#1E3B2F",
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+                    opacity: 0.7,
+                  }}>
+                    Member Since 2025
+                  </div>
+                </div>
+              </a>
+
             </div>
           </div>
         </section>
