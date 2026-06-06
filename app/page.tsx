@@ -102,7 +102,7 @@ export default function Home() {
             {/* Actual food truck photo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://drive.google.com/thumbnail?id=1fyukySt9UNUJffQzysbLi552r9_H3B8c&sz=w1200"
+              src="/truck_hero.jpg"
               alt="Try Fabulous Foods food truck at an event in Virginia"
               style={{
                 position: "absolute",
