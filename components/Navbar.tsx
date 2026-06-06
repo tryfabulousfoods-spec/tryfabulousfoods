@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
     position: "sticky",
     top: 0,
     zIndex: 100,
-    borderBottom: scrolled ? "1px solid #E8DFD0" : "1px solid #E8DFD0",
+    borderBottom: "1px solid #E8DFD0",
     transition: "background 0.3s ease, box-shadow 0.3s ease",
     boxShadow: scrolled ? "0 2px 20px rgba(30,59,47,0.07)" : "none",
   };
@@ -41,29 +42,39 @@ export default function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        height: 70,
+        height: 80,
       }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", flexDirection: "column", lineHeight: 1.15 }}>
-          <span style={{
-            color: "#1E3B2F",
-            fontFamily: "var(--font-display, 'Playfair Display', serif)",
-            fontWeight: 800,
-            fontSize: "1.15rem",
-            letterSpacing: "0.02em",
-          }}>
-            Try Fabulous Foods
-          </span>
-          <span style={{
-            color: "#B8852A",
-            fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-            fontSize: "0.6rem",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            fontWeight: 500,
-          }}>
-            Brick Oven Pizza & Seafood
-          </span>
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.85rem" }}>
+          <Image
+            src="/logo.png"
+            alt="Try Fabulous Foods Logo"
+            width={64}
+            height={64}
+            style={{ objectFit: "contain", flexShrink: 0 }}
+            priority
+          />
+          <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.2 }}>
+            <span style={{
+              color: "#1E3B2F",
+              fontFamily: "var(--font-display, 'Playfair Display', serif)",
+              fontWeight: 800,
+              fontSize: "1.45rem",
+              letterSpacing: "0.01em",
+            }}>
+              Try Fabulous Foods
+            </span>
+            <span style={{
+              color: "#B8852A",
+              fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              fontSize: "0.62rem",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              fontWeight: 500,
+            }}>
+              Brick Oven Pizza & Seafood
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
@@ -122,7 +133,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-
         </div>
       )}
 
