@@ -607,9 +607,31 @@ export default function Home() {
             }}>
               You Can Trust What You Order
             </h2>
-            <p style={{ color: "#6B6860", maxWidth: 520, margin: "0 auto 3.5rem", lineHeight: 1.8, fontSize: "0.98rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+            <p style={{ color: "#6B6860", maxWidth: 520, margin: "0 auto 1.5rem", lineHeight: 1.8, fontSize: "0.98rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
               We hold ourselves to the highest standards — from the food we serve to the way we run our business.
             </p>
+
+            {/* ── Distinction Banner ── */}
+            <div style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.65rem",
+              background: "#1E3B2F",
+              color: "#F5E6C8",
+              borderRadius: 50,
+              padding: "0.6rem 1.5rem",
+              marginBottom: "3rem",
+              fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              fontSize: "0.82rem",
+              fontWeight: 700,
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
+              boxShadow: "0 4px 18px rgba(30,59,47,0.18)",
+            }}>
+              <span style={{ color: "#B8852A", fontSize: "1rem" }}>★</span>
+              First &amp; Only BBB-Accredited Food Truck in Virginia
+              <span style={{ color: "#B8852A", fontSize: "1rem" }}>★</span>
+            </div>
 
             <div style={{
               display: "grid",
