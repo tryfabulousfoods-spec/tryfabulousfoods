@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.85rem" }}>
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Try Fabulous Foods Logo"
             width={64}
             height={64}
