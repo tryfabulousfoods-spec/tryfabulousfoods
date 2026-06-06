@@ -444,7 +444,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Food Blogger */}
+              {/* Culpeper Rodeo 2025 */}
               <div style={{ marginBottom: "2rem" }}>
                 <div style={{
                   display: "flex",
@@ -458,7 +458,7 @@ export default function Home() {
                     fontWeight: 700,
                     color: "#1C1C18",
                     fontSize: "1.05rem",
-                  }}>Food Blogger Review</span>
+                  }}>Live at Culpeper Rodeo 2025</span>
                 </div>
                 <div style={{
                   borderRadius: 8,
@@ -469,7 +469,7 @@ export default function Home() {
                   paddingTop: "56.25%",
                 }}>
                   <iframe
-                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1GtDqM1S9w%2F&show_text=false&width=560"
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfTf67wLW%2F&show_text=false&width=560"
                     style={{
                       position: "absolute",
                       top: 0,
@@ -484,7 +484,7 @@ export default function Home() {
                   />
                 </div>
                 <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  A food blogger stops by the truck and gives her honest take — straight from the event.
+                  Catch us live at the Culpeper Rodeo 2025 — fresh pizza and steamed seafood right at the event.
                 </p>
               </div>
             </div>
