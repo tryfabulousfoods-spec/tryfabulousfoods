@@ -373,7 +373,7 @@ export default function Home() {
             </div>
 
             {/* View all on YouTube */}
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <a
                 href="https://www.youtube.com/@tryfabulousfoods"
                 target="_blank"
@@ -384,6 +384,66 @@ export default function Home() {
               </a>
             </div>
 
+            {/* ── Fans, Foodies & Bloggers ── */}
+            <div style={{ borderTop: "1px solid rgba(184,133,42,0.25)", paddingTop: "2.5rem" }}>
+              <h3 style={{
+                fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                fontWeight: 700,
+                fontSize: "clamp(1.3rem, 2.5vw, 1.75rem)",
+                color: "#1C1C18",
+                textAlign: "center",
+                marginBottom: "0.5rem",
+              }}>
+                Fans, Foodies &amp; Bloggers
+              </h3>
+              <p style={{ textAlign: "center", color: "#6B6860", fontSize: "0.9rem", marginBottom: "2rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                Real people. Real reactions. Straight from the truck.
+              </p>
+
+              {/* Tray — Customer Testimonial */}
+              <div style={{ marginBottom: "2rem" }}>
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  marginBottom: "1rem",
+                }}>
+                  <span style={{ background: "#C94E2A", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
+                  <span style={{
+                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                    fontWeight: 700,
+                    color: "#1C1C18",
+                    fontSize: "1.05rem",
+                  }}>Tray&apos;s Testimonial</span>
+                </div>
+                <div style={{
+                  borderRadius: 8,
+                  boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
+                  overflow: "hidden",
+                  width: "100%",
+                  position: "relative",
+                  paddingTop: "56.25%",
+                }}>
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfRK086YG%2F&show_text=false&width=560"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                    scrolling="no"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                  Hear it straight from Tray — a loyal customer sharing his honest experience with our food.
+                </p>
+              </div>
+            </div>
 
           </div>
         </section>
