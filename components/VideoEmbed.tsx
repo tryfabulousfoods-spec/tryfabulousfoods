@@ -6,7 +6,11 @@ interface VideoEmbedProps {
   title: string;
   platform?: "youtube" | "facebook";
   youtubeId?: string;
-  allow?: string;
+  /**
+   * CSS aspect-ratio value, e.g. "16 / 9" (landscape, default for YouTube),
+   * "9 / 16" (portrait, for phone-shot Facebook videos), "4 / 3", etc.
+   */
+  ratio?: string;
 }
 
 export default function VideoEmbed({
@@ -14,29 +18,32 @@ export default function VideoEmbed({
   title,
   platform = "youtube",
   youtubeId,
-  allow,
+  ratio = "16 / 9",
 }: VideoEmbedProps) {
   const [playing, setPlaying] = useState(false);
 
+  // Use hqdefault — reliably exists for all YouTube videos (maxresdefault can 404)
   const thumbnailUrl =
     platform === "youtube" && youtubeId
-      ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
+      ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
       : null;
 
+  // Append autoplay for YouTube; Facebook URL used as-is
   const iframeSrc =
     platform === "youtube" ? `${src}&autoplay=1` : src;
 
   const defaultAllow =
     platform === "youtube"
-      ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       : "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
 
   return (
     <div
       style={{
+        // CSS aspect-ratio is simpler and more reliable than the padding-top hack
         position: "relative",
         width: "100%",
-        paddingTop: "56.25%",
+        aspectRatio: ratio,
         borderRadius: 8,
         overflow: "hidden",
         boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
@@ -44,58 +51,57 @@ export default function VideoEmbed({
       }}
     >
       {!playing ? (
+        /* ── Thumbnail / play button overlay ── */
         <div
           onClick={() => setPlaying(true)}
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
+            inset: 0,
             cursor: "pointer",
             background: thumbnailUrl
-              ? `url(${thumbnailUrl}) center/cover no-repeat`
-              : "#1C1C18",
+              ? `url(${thumbnailUrl}) center / cover no-repeat`
+              : "#2a2a24",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          {/* Dark scrim so play button pops */}
+          {/* dark scrim */}
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "rgba(0,0,0,0.25)",
+              background: "rgba(0,0,0,0.28)",
             }}
           />
-          {/* Play button */}
-          <div
+          {/* play button */}
+          <button
+            aria-label={`Play ${title}`}
             style={{
               position: "relative",
               zIndex: 2,
               width: 72,
               height: 72,
               background: "rgba(0,0,0,0.72)",
+              border: "none",
               borderRadius: "50%",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.4)",
+              cursor: "pointer",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.45)",
               transition: "transform 0.15s ease, background 0.15s ease",
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.background =
-                "rgba(184,133,42,0.9)";
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.08)";
+              e.currentTarget.style.background = "rgba(184,133,42,0.9)";
+              e.currentTarget.style.transform = "scale(1.1)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.background =
-                "rgba(0,0,0,0.72)";
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+              e.currentTarget.style.background = "rgba(0,0,0,0.72)";
+              e.currentTarget.style.transform = "scale(1)";
             }}
           >
-            {/* Triangle */}
+            {/* triangle */}
             <div
               style={{
                 width: 0,
@@ -106,19 +112,18 @@ export default function VideoEmbed({
                 marginLeft: 6,
               }}
             />
-          </div>
+          </button>
         </div>
       ) : (
+        /* ── Active player ── */
         <iframe
           src={iframeSrc}
           title={title}
-          allow={allow || defaultAllow}
+          allow={defaultAllow}
           allowFullScreen
-          scrolling={platform === "facebook" ? "no" : undefined}
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
+            inset: 0,
             width: "100%",
             height: "100%",
             border: "none",
