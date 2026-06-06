@@ -297,12 +297,10 @@ export default function Home() {
                 }}>Our Story — 4 Years Across Virginia</span>
               </div>
               <div style={{
-                position: "relative",
-                paddingBottom: "56.25%",
-                height: 0,
-                overflow: "hidden",
                 borderRadius: 8,
                 boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
+                overflow: "hidden",
+                width: "100%",
               }}>
                 <iframe
                   src="https://www.youtube.com/embed/ibInwz7c2EE?rel=0&modestbranding=1"
@@ -310,11 +308,9 @@ export default function Home() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
+                    display: "block",
                     width: "100%",
-                    height: "100%",
+                    aspectRatio: "16/9",
                     border: "none",
                   }}
                 />
@@ -354,12 +350,10 @@ export default function Home() {
                   }}>Live at a Virginia Event</span>
                 </div>
                 <div style={{
-                  position: "relative",
-                  paddingBottom: "56.25%",
-                  height: 0,
-                  overflow: "hidden",
                   borderRadius: 8,
                   boxShadow: "0 4px 24px rgba(30,59,47,0.1)",
+                  overflow: "hidden",
+                  width: "100%",
                 }}>
                   <iframe
                     src="https://www.youtube.com/embed/wpktzN7mdAk?rel=0&modestbranding=1"
@@ -367,11 +361,9 @@ export default function Home() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
+                      display: "block",
                       width: "100%",
-                      height: "100%",
+                      aspectRatio: "16/9",
                       border: "none",
                     }}
                   />
@@ -398,12 +390,10 @@ export default function Home() {
                   }}>Behind the Scenes</span>
                 </div>
                 <div style={{
-                  position: "relative",
-                  paddingBottom: "56.25%",
-                  height: 0,
-                  overflow: "hidden",
                   borderRadius: 8,
                   boxShadow: "0 4px 24px rgba(30,59,47,0.1)",
+                  overflow: "hidden",
+                  width: "100%",
                 }}>
                   <iframe
                     src="https://www.youtube.com/embed/g4umNXvAWiw?rel=0&modestbranding=1"
@@ -411,11 +401,9 @@ export default function Home() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
+                      display: "block",
                       width: "100%",
-                      height: "100%",
+                      aspectRatio: "16/9",
                       border: "none",
                     }}
                   />
