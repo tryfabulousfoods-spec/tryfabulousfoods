@@ -572,6 +572,94 @@ export default function Home() {
                 View All Videos on YouTube
               </a>
             </div>
+
+            {/* ── Fan & Blogger Videos ── */}
+            <div style={{ marginTop: "4rem", borderTop: "1px solid rgba(30,59,47,0.12)", paddingTop: "3.5rem" }}>
+              <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+                <span style={{ display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.6rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                  Real People. Real Reactions.
+                </span>
+                <h3 style={{ fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 700, color: "#1C1C18", fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)", marginBottom: "0.75rem" }}>
+                  Fans, Foodies & Bloggers Weigh In
+                </h3>
+                <p style={{ color: "#6B6860", fontSize: "0.9rem", lineHeight: 1.75, maxWidth: 520, margin: "0 auto" }}>
+                  Don&apos;t take our word for it. Here&apos;s what real customers and food influencers had to say straight from the event.
+                </p>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.25rem" }}>
+                {[
+                  { label: "Tray's Testimonial", desc: "Hear Tray break down our famous Crab Bombs — his reaction says it all.", href: "https://www.facebook.com/share/r/14dxpZn1h71/?mibextid=wwXIfr" },
+                  { label: "Food Blogger Spotlight", desc: "A food influencer digs into our Crab Imperial Fries and gives the real verdict.", href: "https://www.facebook.com/share/r/1DAepWVsLW/?mibextid=wwXIfr" },
+                  { label: "Influencer Review #2", desc: "Another foodie influencer hits the truck and reviews the full experience.", href: "https://www.facebook.com/share/r/18naWhGGsi/?mibextid=wwXIfr" },
+                  { label: "Influencer Review #3", desc: "One more fan favorite — straight from the event, straight to you.", href: "https://www.facebook.com/share/r/18mmA4vwYg/?mibextid=wwXIfr" },
+                ].map(({ label, desc, href }) => (
+                  <div key={label} style={{ background: "#1E3B2F", border: "1px solid rgba(30,59,47,0.15)", borderRadius: 8, padding: "2rem 1.5rem", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <div style={{ width: 54, height: 54, background: "#C94E2A", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem", flexShrink: 0 }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ marginLeft: 3 }}><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                    <h4 style={{ color: "#FAFAF7", fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 700, fontSize: "0.98rem", marginBottom: "0.65rem" }}>{label}</h4>
+                    <p style={{ color: "#7A9E90", fontSize: "0.83rem", lineHeight: 1.7, marginBottom: "1.4rem", flexGrow: 1 }}>{desc}</p>
+                    <a href={href} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1877F2", color: "#fff", padding: "0.65rem 1.5rem", borderRadius: 4, fontWeight: 700, fontSize: "0.78rem", letterSpacing: "0.07em", textTransform: "uppercase", textDecoration: "none", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                      Watch on Facebook
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── PHOTO GALLERY ── */}
+        <section id="gallery" style={{ background: "#1C1C18", padding: "5.5rem 1.5rem" }}>
+          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <span style={{ display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.75rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                Food & Moments
+              </span>
+              <h2 style={{ fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 800, fontSize: "clamp(1.9rem, 3vw, 2.75rem)", color: "#FAFAF7", marginBottom: "1rem" }}>
+                See It for Yourself
+              </h2>
+              <p style={{ color: "#7A9E90", maxWidth: 520, margin: "0 auto", lineHeight: 1.8, fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                Real food. Real events. Real moments from the road across Virginia.
+              </p>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "0.5rem" }}>
+              {[
+                "1y2aOXeV7utzY85ppiP_yLtpoMOvua53I",
+                "1fyukySt9UNUJffQzysbLi552r9_H3B8c",
+                "1ONrj20oaDDc_gbNtE3ufWXxBoIwDA353",
+                "1zatuXBmLUR3ZLGqGZAClsZ1iCIgu6INr",
+                "1Xr4uiX8eBmv89MEzevLKbQAtpW6aQA0B",
+                "1TPIY0YsIrkx7Ye0jBxtbIMwtVA_Se1QN",
+                "1YtMhz2VE-5S8bQX-47nwYBfzwzem_ATE",
+                "1hlQU0pIuPCkYUk7NahNGJtoW1rrhLo38",
+                "1gOdOqLd2uoXrpNw0mPdeInhc6fhcluHH",
+                "1tgzbvtLml8E1_XuNL3HphQkpSirpE-5S",
+                "1M8JAawecXkmNGG7RlcaVDaopuuWHuYcq",
+                "1STavrXPsP-rzvz45kUpzcqqIC-SQhTSo",
+                "11UhiovE6Hsa7DzOtN_7o_T9yJRX5dzvH",
+                "1lTfIp46-wgmdtlTDY9y5hNWa_0Vojbyh",
+                "1HOw2gorDdmh2Ja8TMZi2cbMGVM4-ZQ4k",
+                "1waVlfp490LUtGX7ThSh3GigzrOhoMul_",
+                "1NGWyMh-0n-PIy1TYCUU98gldVzDNXtGw",
+                "1NQ64Rya1OXdzp7DpnCiuWJif2oz32M8Z",
+                "1dPq_mv67jP_5WCzACrZUU1Bi2nE_mnQs",
+                "17qtJq4L-WiGSr-8kZDORoeCov2GBpjxQ",
+                "1bh7DlKWePwVi0ZxlusHlMnK4vqYXmHSs",
+                "1ULRC_Jih1SkKOjz2TEsGB0swby1eGreK",
+              ].map((id, i) => (
+                <div key={id} style={{ aspectRatio: "1 / 1", overflow: "hidden", borderRadius: 3, background: "#2A2A26" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`https://drive.google.com/thumbnail?id=${id}&sz=w600`}
+                    alt={`Try Fabulous Foods — photo ${i + 1}`}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
