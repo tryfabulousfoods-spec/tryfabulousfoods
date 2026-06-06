@@ -396,6 +396,185 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── VIDEOS ── */}
+        <section id="videos" style={{ background: "#F2EDE3", padding: "6rem 1.5rem" }}>
+          <div style={{ maxWidth: 1140, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+              <span className="section-label">See Us in Action</span>
+              <h2 style={{
+                fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                fontSize: "clamp(1.9rem, 3vw, 2.75rem)",
+                fontWeight: 800,
+                color: "#1C1C18",
+                marginBottom: "1rem",
+              }}>
+                Watch. Taste. Experience.
+              </h2>
+              <p style={{ color: "#6B6860", maxWidth: 600, margin: "0 auto", lineHeight: 1.75, fontSize: "1rem" }}>
+                From festivals across Virginia to fresh food straight off the brick oven — here&apos;s what we&apos;re all about.
+              </p>
+            </div>
+
+            {/* Featured video: 4-Year Journey */}
+            <div style={{ marginBottom: "2.5rem" }}>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem",
+                marginBottom: "1rem",
+              }}>
+                <span style={{ background: "#C94E2A", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
+                <span style={{
+                  fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                  fontWeight: 700,
+                  color: "#1C1C18",
+                  fontSize: "1.05rem",
+                }}>Our Story — 4 Years Across Virginia</span>
+              </div>
+              <div style={{
+                position: "relative",
+                paddingBottom: "56.25%",
+                height: 0,
+                overflow: "hidden",
+                borderRadius: 8,
+                boxShadow: "0 8px 40px rgba(30,59,47,0.13)",
+              }}>
+                <iframe
+                  src="https://www.youtube.com/embed/ibInwz7c2EE?rel=0&modestbranding=1"
+                  title="Try Fabulous Foods — 4 Years Across Virginia"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: "none",
+                  }}
+                />
+              </div>
+              <p style={{
+                color: "#6B6860",
+                fontSize: "0.88rem",
+                marginTop: "0.85rem",
+                lineHeight: 1.65,
+                fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
+              }}>
+                4 years. Across Virginia. One food truck. Watch us trace our journey serving brick oven pizza and fresh seafood at events across the Commonwealth — from local fairs to major festivals.
+              </p>
+            </div>
+
+            {/* 2-video grid */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "2rem",
+              marginBottom: "3rem",
+            }}>
+              {/* Live Event */}
+              <div>
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  marginBottom: "1rem",
+                }}>
+                  <span style={{ background: "#1E3B2F", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
+                  <span style={{
+                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                    fontWeight: 700,
+                    color: "#1C1C18",
+                    fontSize: "0.98rem",
+                  }}>Live at a Virginia Event</span>
+                </div>
+                <div style={{
+                  position: "relative",
+                  paddingBottom: "56.25%",
+                  height: 0,
+                  overflow: "hidden",
+                  borderRadius: 8,
+                  boxShadow: "0 4px 24px rgba(30,59,47,0.1)",
+                }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/wpktzN7mdAk?rel=0&modestbranding=1"
+                    title="Virginia's First Brick Oven Food Truck at a Live Event"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                  />
+                </div>
+                <p style={{ color: "#6B6860", fontSize: "0.83rem", marginTop: "0.75rem", lineHeight: 1.6, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                  Virginia&apos;s first brick oven food truck, fully operational at a live event — 80 to 110 fresh pizzas per hour, dual windows, zero slowdown.
+                </p>
+              </div>
+
+              {/* Behind the Scenes */}
+              <div>
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  marginBottom: "1rem",
+                }}>
+                  <span style={{ background: "#B8852A", width: 4, height: 22, borderRadius: 2, flexShrink: 0, display: "block" }} />
+                  <span style={{
+                    fontFamily: "var(--font-display, 'Playfair Display', serif)",
+                    fontWeight: 700,
+                    color: "#1C1C18",
+                    fontSize: "0.98rem",
+                  }}>Behind the Scenes</span>
+                </div>
+                <div style={{
+                  position: "relative",
+                  paddingBottom: "56.25%",
+                  height: 0,
+                  overflow: "hidden",
+                  borderRadius: 8,
+                  boxShadow: "0 4px 24px rgba(30,59,47,0.1)",
+                }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/g4umNXvAWiw?rel=0&modestbranding=1"
+                    title="Mobile Brick Oven Pizza Truck in Virginia — Behind the Scenes"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                  />
+                </div>
+                <p style={{ color: "#6B6860", fontSize: "0.83rem", marginTop: "0.75rem", lineHeight: 1.6, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                  Go behind the scenes — watch our team handle a full service operation, from firing up the brick oven to plating fresh seafood orders on the fly.
+                </p>
+              </div>
+            </div>
+
+            {/* View all on YouTube */}
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="https://www.youtube.com/@tryfabulousfoods"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                View All Videos on YouTube
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── REVIEWS ── */}
         <section style={{ background: "#FAFAF7", padding: "6rem 1.5rem" }}>
           <div style={{ maxWidth: 1140, margin: "0 auto" }}>
