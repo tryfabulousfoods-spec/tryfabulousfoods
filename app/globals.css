@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --flame: #D94F00;
+  --flame-light: #F26419;
+  --char: #1A1A1A;
+  --cream: #FDF6EC;
+  --gold: #C8872B;
+  --seafoam: #1B6B6B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--cream);
+  color: var(--char);
+}
