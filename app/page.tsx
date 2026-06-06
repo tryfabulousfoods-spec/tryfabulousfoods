@@ -516,8 +516,7 @@ export default function Home() {
                 "1TPIY0YsIrkx7Ye0jBxtbIMwtVA_Se1QN",
                 "1YtMhz2VE-5S8bQX-47nwYBfzwzem_ATE",
                 "1hlQU0pIuPCkYUk7NahNGJtoW1rrhLo38",
-                "1gOdOqLd2uoXrpNw0mPdeInhc6fhcluHH",
-                "1tgzbvtLml8E1_XuNL3HphQkpSirpE-5S",
+
                 "1M8JAawecXkmNGG7RlcaVDaopuuWHuYcq",
                 "1STavrXPsP-rzvz45kUpzcqqIC-SQhTSo",
                 "11UhiovE6Hsa7DzOtN_7o_T9yJRX5dzvH",
