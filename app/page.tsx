@@ -392,9 +392,10 @@ export default function Home() {
                   }}>Tray&apos;s Testimonial</span>
                 </div>
                 <VideoEmbed
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfRK086YG%2F&show_text=false&width=560"
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfRK086YG%2F&show_text=false"
                   title="Tray's Testimonial — Try Fabulous Foods"
                   platform="facebook"
+                  ratio="9 / 16"
                 />
                 <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
                   Hear it straight from Tray — a loyal customer sharing his honest experience with our food.
@@ -418,9 +419,10 @@ export default function Home() {
                   }}>Live at Culpeper Rodeo 2025</span>
                 </div>
                 <VideoEmbed
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfTf67wLW%2F&show_text=false&width=560"
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FHAfTf67wLW%2F&show_text=false"
                   title="Live at Culpeper Rodeo 2025 — Try Fabulous Foods"
                   platform="facebook"
+                  ratio="9 / 16"
                 />
                 <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
                   Catch us live at the Culpeper Rodeo 2025 — fresh pizza and steamed seafood right at the event.
