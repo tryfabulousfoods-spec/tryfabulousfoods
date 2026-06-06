@@ -81,9 +81,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary" style={{ padding: "0.6rem 1.35rem", fontSize: "0.78rem" }}>
-            Check Availability
-          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -124,9 +121,7 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary" style={{ textAlign: "center", padding: "0.85rem 1.2rem" }}>
-            Check Availability
-          </Link>
+
         </div>
       )}
 

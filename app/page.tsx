@@ -59,8 +59,7 @@ export default function Home() {
             </p>
 
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
-              <Link href="/contact" className="btn-primary">Check Availability</Link>
-              <Link href="/menu" className="btn-outline">View Menu</Link>
+              <Link href="/menu" className="btn-primary">View Menu</Link>
             </div>
 
             {/* Trust signals */}
@@ -519,7 +518,7 @@ export default function Home() {
               <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2rem", fontSize: "1rem", maxWidth: 440 }}>
                 Whether it&apos;s a festival, corporate event, or private party — we bring the brick oven to you. Serving all of Virginia.
               </p>
-              <Link href="/contact" className="btn-primary">Check Availability</Link>
+
             </div>
 
             {/* Feature grid */}
