@@ -97,87 +97,45 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: Visual Block */}
+          {/* Right: Food Truck Photo */}
           <div style={{ position: "relative", overflow: "hidden" }}>
-            {/* Forest green decorative panel */}
+            {/* Actual food truck photo */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://drive.google.com/thumbnail?id=1fyukySt9UNUJffQzysbLi552r9_H3B8c&sz=w1200"
+              alt="Try Fabulous Foods food truck at an event in Virginia"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0% 100%)",
+              }}
+            />
+            {/* Green overlay — keeps brand feel, improves text legibility */}
             <div style={{
               position: "absolute",
               inset: 0,
-              background: "#1E3B2F",
+              background: "linear-gradient(160deg, rgba(30,59,47,0.65) 0%, rgba(30,59,47,0.25) 60%, rgba(30,59,47,0.55) 100%)",
               clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0% 100%)",
             }} />
-            {/* Gold accent */}
-            <div style={{
-              position: "absolute",
-              bottom: 0,
-              right: 0,
-              width: "60%",
-              height: "40%",
-              background: "#B8852A",
-              clipPath: "polygon(30% 100%, 100% 60%, 100% 100%)",
-              opacity: 0.9,
-            }} />
-            {/* Terracotta spot */}
-            <div style={{
-              position: "absolute",
-              top: "12%",
-              right: "10%",
-              width: 160,
-              height: 160,
-              borderRadius: "50%",
-              background: "#C94E2A",
-              opacity: 0.12,
-            }} />
-            {/* Center content inside the green panel */}
+            {/* Content anchored to bottom */}
             <div style={{
               position: "relative",
               zIndex: 2,
               height: "100%",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
-              padding: "4rem 3rem 4rem 5rem",
-              gap: "2rem",
+              justifyContent: "flex-end",
+              padding: "4rem 3rem 3.5rem 5rem",
             }}>
-              {/* Feature cards */}
-              {[
-                { icon: "🔥", label: "Brick Oven", desc: "Pizza cooked fresh in under 2 minutes" },
-                { icon: "🦞", label: "Fresh Shellfish", desc: "Crab legs, shrimp, mussels & more" },
-                { icon: "🎪", label: "Festival Ready", desc: "High-volume, all of Virginia" },
-              ].map(({ icon, label, desc }) => (
-                <div key={label} style={{
-                  background: "rgba(255,255,255,0.07)",
-                  backdropFilter: "blur(8px)",
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  borderRadius: 8,
-                  padding: "1.25rem 1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1.25rem",
-                }}>
-                  <span style={{ fontSize: "1.75rem" }}>{icon}</span>
-                  <div>
-                    <div style={{
-                      color: "#FAFAF7",
-                      fontWeight: 700,
-                      fontSize: "0.95rem",
-                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                    }}>{label}</div>
-                    <div style={{
-                      color: "#9EB5A8",
-                      fontSize: "0.8rem",
-                      marginTop: "0.2rem",
-                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                    }}>{desc}</div>
-                  </div>
-                </div>
-              ))}
-
               {/* Gold tagline block */}
               <div style={{
-                background: "#B8852A",
+                background: "rgba(184,133,42,0.95)",
                 borderRadius: 6,
                 padding: "1.25rem 1.5rem",
+                maxWidth: 360,
               }}>
                 <div style={{
                   color: "#fff",
@@ -533,8 +491,9 @@ export default function Home() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "0.5rem" }}>
               {[
-                "1y2aOXeV7utzY85ppiP_yLtpoMOvua53I",
+                "1AH-RbkVvnCJ9gxNwVCyqxMcqT7-i2S7j",
                 "1fyukySt9UNUJffQzysbLi552r9_H3B8c",
+                "1y2aOXeV7utzY85ppiP_yLtpoMOvua53I",
                 "1ONrj20oaDDc_gbNtE3ufWXxBoIwDA353",
                 "1zatuXBmLUR3ZLGqGZAClsZ1iCIgu6INr",
                 "1Xr4uiX8eBmv89MEzevLKbQAtpW6aQA0B",
