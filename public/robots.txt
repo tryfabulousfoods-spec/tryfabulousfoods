@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tryfabulousfoods.com/sitemap.xml
+Sitemap: https://www.tryfabulousfoods.com/sitemap.xml
