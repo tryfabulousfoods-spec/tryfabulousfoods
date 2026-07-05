@@ -5,7 +5,6 @@ import VideoEmbed from "@/components/VideoEmbed";
 
 const reviews = [
   { name: "Sarah M.", text: "Best pizza I've ever had at a festival! The brick oven makes all the difference — hot, fresh, incredible crust in under 2 minutes.", stars: 5 },
-  { name: "James T.", text: "Hired them for our corporate event and they knocked it out of the park. The seafood was unbelievably fresh. Will book again!", stars: 5 },
   { name: "Keisha R.", text: "Snow crab legs at a food truck?! I didn't believe it til I tried it. Absolutely fabulous — lives up to the name.", stars: 5 },
   { name: "Mike D.", text: "They served 500 people at our county fair and never missed a beat. Fast, friendly, and the food was outstanding.", stars: 5 },
 ];
@@ -168,44 +167,6 @@ export default function Home() {
           `}</style>
         </section>
 
-        {/* ── MARQUEE STRIP ── */}
-        <section style={{
-          background: "#C94E2A",
-          padding: "1.1rem 0",
-          overflow: "hidden",
-        }}>
-          <div style={{
-            display: "flex",
-            gap: "3rem",
-            animation: "none",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            maxWidth: 1140,
-            margin: "0 auto",
-            padding: "0 1.5rem",
-          }}>
-            {[
-              "🔥 Brick Oven Pizza in Under 2 Minutes",
-              "🦞 Freshest Steamed Seafood in Virginia",
-              "🎪 Festivals · Fairs · Corporate Events",
-              "📍 Serving All of Virginia",
-              "⭐ 4+ Years of Experience",
-            ].map((item) => (
-              <span key={item} style={{
-                color: "#fff",
-                fontSize: "0.8rem",
-                fontWeight: 600,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                whiteSpace: "nowrap",
-                fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-              }}>
-                {item}
-              </span>
-            ))}
-          </div>
-        </section>
-
         {/* ── ABOUT ── */}
         <section id="about" style={{ padding: "6rem 1.5rem", background: "#FAFAF7" }}>
           <div style={{
@@ -230,11 +191,8 @@ export default function Home() {
                 <em style={{ color: "#1E3B2F", fontStyle: "italic" }}>Brick Oven Pizza</em><br />
                 &amp; Seafood Truck
               </h2>
-              <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "1rem", fontSize: "1rem" }}>
-                Try Fabulous Foods started with a vision: bring gourmet brick oven pizza and the freshest steamed seafood to events across Virginia.
-              </p>
               <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2.5rem", fontSize: "1rem" }}>
-                We invested in a custom-made brick oven that cooks pizzas in under 2 minutes — making us the perfect choice for high-volume festivals where speed and quality both matter.
+                Try Fabulous Foods brings gourmet brick oven pizza and the freshest steamed seafood to events across Virginia — our custom-made oven cooks pizzas in under 2 minutes, making us the perfect fit for high-volume festivals where speed and quality both matter.
               </p>
               <Link href="/contact" className="btn-outline">Book an Event</Link>
             </div>
@@ -277,7 +235,7 @@ export default function Home() {
                 Watch. Taste. Experience.
               </h2>
               <p style={{ color: "#6B6860", maxWidth: 600, margin: "0 auto", lineHeight: 1.75, fontSize: "1rem" }}>
-                From festivals across Virginia to fresh food straight off the brick oven — here&apos;s what we&apos;re all about.
+                Real events, real reactions, straight from the truck.
               </p>
             </div>
 
@@ -310,7 +268,7 @@ export default function Home() {
                 lineHeight: 1.65,
                 fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
               }}>
-                Virginia&apos;s first brick oven food truck, fully operational at a live event — 80 to 110 fresh pizzas per hour, dual windows, zero slowdown.
+                80–110 fresh pizzas per hour, dual windows, zero slowdown.
               </p>
             </div>
 
@@ -343,7 +301,7 @@ export default function Home() {
                 lineHeight: 1.65,
                 fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
               }}>
-                Go behind the scenes — watch our team handle a full service operation, from firing up the brick oven to plating fresh seafood orders on the fly.
+                A full service — from firing the oven to plating fresh seafood.
               </p>
             </div>
 
@@ -367,13 +325,10 @@ export default function Home() {
                 fontSize: "clamp(1.3rem, 2.5vw, 1.75rem)",
                 color: "#1C1C18",
                 textAlign: "center",
-                marginBottom: "0.5rem",
+                marginBottom: "2rem",
               }}>
                 Fans, Foodies &amp; Bloggers
               </h3>
-              <p style={{ textAlign: "center", color: "#6B6860", fontSize: "0.9rem", marginBottom: "2rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                Real people. Real reactions. Straight from the truck.
-              </p>
 
               {/* Tray — Customer Testimonial */}
               <div style={{ marginBottom: "2rem" }}>
@@ -397,9 +352,6 @@ export default function Home() {
                   platform="facebook"
                   ratio="9 / 16"
                 />
-                <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  Hear it straight from Tray — a loyal customer sharing his honest experience with our food.
-                </p>
               </div>
 
               {/* Culpeper Rodeo 2025 */}
@@ -424,9 +376,6 @@ export default function Home() {
                   platform="facebook"
                   ratio="9 / 16"
                 />
-                <p style={{ color: "#6B6860", fontSize: "0.88rem", marginTop: "0.85rem", lineHeight: 1.65, fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  Catch us live at the Culpeper Rodeo 2025 — fresh pizza and steamed seafood right at the event.
-                </p>
               </div>
             </div>
 
@@ -455,21 +404,13 @@ export default function Home() {
                 "1zatuXBmLUR3ZLGqGZAClsZ1iCIgu6INr",
                 "1Xr4uiX8eBmv89MEzevLKbQAtpW6aQA0B",
                 "1TPIY0YsIrkx7Ye0jBxtbIMwtVA_Se1QN",
-                "1YtMhz2VE-5S8bQX-47nwYBfzwzem_ATE",
-                "1hlQU0pIuPCkYUk7NahNGJtoW1rrhLo38",
 
                 "1M8JAawecXkmNGG7RlcaVDaopuuWHuYcq",
                 "1STavrXPsP-rzvz45kUpzcqqIC-SQhTSo",
                 "11UhiovE6Hsa7DzOtN_7o_T9yJRX5dzvH",
                 "1lTfIp46-wgmdtlTDY9y5hNWa_0Vojbyh",
                 "1HOw2gorDdmh2Ja8TMZi2cbMGVM4-ZQ4k",
-                "1waVlfp490LUtGX7ThSh3GigzrOhoMul_",
                 "1NGWyMh-0n-PIy1TYCUU98gldVzDNXtGw",
-                "1NQ64Rya1OXdzp7DpnCiuWJif2oz32M8Z",
-                "1dPq_mv67jP_5WCzACrZUU1Bi2nE_mnQs",
-                "17qtJq4L-WiGSr-8kZDORoeCov2GBpjxQ",
-                "1bh7DlKWePwVi0ZxlusHlMnK4vqYXmHSs",
-                "1ULRC_Jih1SkKOjz2TEsGB0swby1eGreK",
               ].map((id, i) => (
                 <div key={id} style={{ aspectRatio: "1 / 1", overflow: "hidden", borderRadius: 3, background: "#2A2A26" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -743,7 +684,7 @@ export default function Home() {
               Want to Know Where We&apos;ll Be?
             </h2>
             <p style={{ color: "#7A9E90", lineHeight: 1.85, marginBottom: "2.5rem", fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-              Stay tuned to our Facebook and Instagram pages — we update them every week with where we&apos;ll be. Give us a follow and we&apos;ll keep you in the loop!
+              Follow us on Facebook and Instagram — we post weekly updates on where to find the truck.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="https://www.facebook.com/tryfabulousfoods" target="_blank" rel="noopener noreferrer" style={{
@@ -780,67 +721,23 @@ export default function Home() {
 
         {/* ── BOOKING CTA ── */}
         <section style={{ background: "#F2EDE3", padding: "6rem 1.5rem" }}>
-          <div style={{
-            maxWidth: 1140,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "3rem",
-            alignItems: "center",
-          }}>
-            <div>
-              <span className="section-label">Ready to Book?</span>
-              <h2 style={{
-                fontFamily: "var(--font-display, 'Playfair Display', serif)",
-                fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                fontWeight: 800,
-                color: "#1C1C18",
-                lineHeight: 1.15,
-                marginBottom: "1.25rem",
-              }}>
-                Bring Try Fabulous Foods<br />
-                <em style={{ color: "#C94E2A", fontStyle: "italic" }}>to Your Event</em>
-              </h2>
-              <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2rem", fontSize: "1rem", maxWidth: 440 }}>
-                Whether it&apos;s a festival, corporate event, or private party — we bring the brick oven to you. Serving all of Virginia.
-              </p>
-
-            </div>
-
-            {/* Feature grid */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              {[
-                ["🎪", "Large Festivals & Fairs", "High-volume service built to feed thousands"],
-                ["🏢", "Corporate Events", "Professional setup, reliable execution"],
-                ["🎉", "Private Parties", "Customizable menus for any occasion"],
-              ].map(([icon, title, desc]) => (
-                <div key={title as string} style={{
-                  background: "#FAFAF7",
-                  borderRadius: 6,
-                  padding: "1.25rem 1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1.25rem",
-                  border: "1px solid #E8DFD0",
-                }}>
-                  <span style={{ fontSize: "1.5rem", flexShrink: 0 }}>{icon}</span>
-                  <div>
-                    <div style={{
-                      fontWeight: 700,
-                      color: "#1C1C18",
-                      fontSize: "0.95rem",
-                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                    }}>{title}</div>
-                    <div style={{
-                      color: "#6B6860",
-                      fontSize: "0.82rem",
-                      marginTop: "0.2rem",
-                      fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
-                    }}>{desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
+            <span className="section-label">Ready to Book?</span>
+            <h2 style={{
+              fontFamily: "var(--font-display, 'Playfair Display', serif)",
+              fontSize: "clamp(2rem, 3.5vw, 3rem)",
+              fontWeight: 800,
+              color: "#1C1C18",
+              lineHeight: 1.15,
+              marginBottom: "1.25rem",
+            }}>
+              Bring Try Fabulous Foods<br />
+              <em style={{ color: "#C94E2A", fontStyle: "italic" }}>to Your Event</em>
+            </h2>
+            <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2rem", fontSize: "1rem", maxWidth: 440, margin: "0 auto 2rem" }}>
+              Festivals, fairs, corporate events, or private parties — we bring the brick oven to you, anywhere in Virginia.
+            </p>
+            <Link href="/contact" className="btn-primary">Book an Event</Link>
           </div>
         </section>
 
