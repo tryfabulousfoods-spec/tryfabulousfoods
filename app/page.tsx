@@ -382,50 +382,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── PHOTO GALLERY ── */}
-        <section id="gallery" style={{ background: "#1C1C18", padding: "5.5rem 1.5rem" }}>
-          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <span style={{ display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.75rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                Food & Moments
-              </span>
-              <h2 style={{ fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 800, fontSize: "clamp(1.9rem, 3vw, 2.75rem)", color: "#FAFAF7", marginBottom: "1rem" }}>
-                See It for Yourself
-              </h2>
-              <p style={{ color: "#7A9E90", maxWidth: 520, margin: "0 auto", lineHeight: 1.8, fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                Real food. Real events. Real moments from the road across Virginia.
-              </p>
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "0.5rem" }}>
-              {[
-                "1AH-RbkVvnCJ9gxNwVCyqxMcqT7-i2S7j",
-                "1y2aOXeV7utzY85ppiP_yLtpoMOvua53I",
-                "1ONrj20oaDDc_gbNtE3ufWXxBoIwDA353",
-                "1zatuXBmLUR3ZLGqGZAClsZ1iCIgu6INr",
-                "1Xr4uiX8eBmv89MEzevLKbQAtpW6aQA0B",
-                "1TPIY0YsIrkx7Ye0jBxtbIMwtVA_Se1QN",
-
-                "1M8JAawecXkmNGG7RlcaVDaopuuWHuYcq",
-                "1STavrXPsP-rzvz45kUpzcqqIC-SQhTSo",
-                "11UhiovE6Hsa7DzOtN_7o_T9yJRX5dzvH",
-                "1lTfIp46-wgmdtlTDY9y5hNWa_0Vojbyh",
-                "1HOw2gorDdmh2Ja8TMZi2cbMGVM4-ZQ4k",
-                "1NGWyMh-0n-PIy1TYCUU98gldVzDNXtGw",
-              ].map((id, i) => (
-                <div key={id} style={{ aspectRatio: "1 / 1", overflow: "hidden", borderRadius: 3, background: "#2A2A26" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`https://drive.google.com/thumbnail?id=${id}&sz=w600`}
-                    alt={`Try Fabulous Foods — photo ${i + 1}`}
-                    loading="lazy"
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── REVIEWS ── */}
         <section style={{ background: "#FAFAF7", padding: "6rem 1.5rem" }}>
           <div style={{ maxWidth: 1140, margin: "0 auto" }}>
