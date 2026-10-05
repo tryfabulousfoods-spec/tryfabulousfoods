@@ -5,26 +5,27 @@ import Link from "next/link";
 const pizzaItems = [
   { name: "Cheese Pizza", price: "$10", note: "" },
   { name: "Garlic & Herb Pizza", price: "$12", note: "" },
-  { name: "Beer Brat Pizza", price: "$14", note: "" },
+  { name: "Fried Chicken Pizza", price: "$14", note: "" },
   { name: "Dill Pickle Pizza", price: "$14", note: "Customer favorite — bold, tangy, and always a conversation starter", star: true },
-  { name: "Signature Fried Chicken Pizza", price: "$14", note: "" },
-  { name: "Chimi Steak & Cheese Crunch Wrap", price: "$14", note: "Served with fries and pizza dipping sauce" },
 ];
 
-const toppings = ["Sweet Italian Sausage", "Pepperoni", "Smoked Bacon", "Pineapple", "Seasoned Mushrooms", "Green Olives"];
+const toppings = ["Pepperoni", "Smoked Bacon", "Sweet Italian Sausage", "Pineapple", "Green Olives", "Seasoned Diced Mushrooms"];
 
-const sidesItems = [
-  { name: "Regular Fries", price: "$6", note: "" },
-  { name: "Boardwalk Fries", price: "$6", note: "Malt vinegar and sea salt" },
-  { name: "Old Bay Fries", price: "$6", note: "" },
+const bowlsItems = [
+  { name: "Garlic and Herb Parmesan French Fry Bowl", price: "$12", note: "" },
+  { name: "Cheesy Cheddar Cheese with Smoked Bacon Bowl", price: "$16", note: "" },
+];
+
+const drinksItems = [
   { name: "Bottled Water", price: "$2", note: "" },
 ];
 
 const seafoodItems = [
   { name: "Jumbo Steamed Shrimp (1 lb)", price: "$18", note: "Choice of butter or house-made cocktail sauce" },
+  { name: "Garlic and Herb Shrimp", price: "$18", note: "Tossed in garlic-herb butter" },
+  { name: "Oyster Platter (1 lb)", price: "$18", note: "Fried oysters, served with fries" },
+  { name: "Oyster Rockefeller Fries", price: "$14", note: "" },
   { name: "Crab Imperial Fries", price: "$18", note: "Old Bay fries + crab + imperial white sauce + shredded mozzarella" },
-  { name: "Fried Oyster Platter", price: "$18", note: "Served with fries" },
-  { name: "Two 4 oz Handmade Crab Cakes w/ Fries", price: "$20", note: "Steamed" },
 ];
 
 function MenuItem({ name, price, note, star }: { name: string; price: string; note?: string; star?: boolean }) {
@@ -100,7 +101,7 @@ export default function MenuPage() {
                 <div style={{ color: "#B8852A", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.3rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>Brick Oven</div>
                 <h2 style={{ color: "#FAFAF7", fontWeight: 800, fontSize: "1.5rem", margin: 0, fontFamily: "var(--font-display, 'Playfair Display', serif)" }}>Pizza (10")</h2>
                 <div style={{ color: "#7A9E90", fontSize: "0.78rem", marginTop: "0.5rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-                  Additional toppings $1 each: {toppings.join(", ")}
+                  Additional toppings $1 each: {toppings.join(", ")}. Extra dipping sauces $1 each.
                 </div>
               </div>
               <ul style={{ listStyle: "none", margin: 0, padding: "0.5rem 2rem 1rem" }}>
@@ -110,14 +111,14 @@ export default function MenuPage() {
               </ul>
             </div>
 
-            {/* SIDES */}
+            {/* FRY BOWLS */}
             <div style={{ background: "#fff", borderRadius: 10, overflow: "hidden", boxShadow: "0 4px 24px rgba(30,59,47,0.08)", border: "1px solid #E8DFD0" }}>
               <div style={{ background: "#4A6741", padding: "1.6rem 2rem" }}>
-                <div style={{ color: "#D4B483", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.3rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>Extras</div>
-                <h2 style={{ color: "#FAFAF7", fontWeight: 800, fontSize: "1.5rem", margin: 0, fontFamily: "var(--font-display, 'Playfair Display', serif)" }}>Sides & Drinks</h2>
+                <div style={{ color: "#D4B483", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.3rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>Loaded</div>
+                <h2 style={{ color: "#FAFAF7", fontWeight: 800, fontSize: "1.5rem", margin: 0, fontFamily: "var(--font-display, 'Playfair Display', serif)" }}>Fry Bowls</h2>
               </div>
               <ul style={{ listStyle: "none", margin: 0, padding: "0.5rem 2rem 1rem" }}>
-                {sidesItems.map((item) => (
+                {bowlsItems.map((item) => (
                   <MenuItem key={item.name} {...item} />
                 ))}
               </ul>
@@ -131,6 +132,19 @@ export default function MenuPage() {
               </div>
               <ul style={{ listStyle: "none", margin: 0, padding: "0.5rem 2rem 1rem" }}>
                 {seafoodItems.map((item) => (
+                  <MenuItem key={item.name} {...item} />
+                ))}
+              </ul>
+            </div>
+
+            {/* DRINKS */}
+            <div style={{ background: "#fff", borderRadius: 10, overflow: "hidden", boxShadow: "0 4px 24px rgba(30,59,47,0.08)", border: "1px solid #E8DFD0" }}>
+              <div style={{ background: "#4A6741", padding: "1.6rem 2rem" }}>
+                <div style={{ color: "#D4B483", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.3rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>Drinks</div>
+                <h2 style={{ color: "#FAFAF7", fontWeight: 800, fontSize: "1.5rem", margin: 0, fontFamily: "var(--font-display, 'Playfair Display', serif)" }}>Drinks</h2>
+              </div>
+              <ul style={{ listStyle: "none", margin: 0, padding: "0.5rem 2rem 1rem" }}>
+                {drinksItems.map((item) => (
                   <MenuItem key={item.name} {...item} />
                 ))}
               </ul>
@@ -157,7 +171,7 @@ export default function MenuPage() {
               Book Us for Your Event
             </h2>
             <p style={{ color: "#7A9E90", fontSize: "0.9rem", lineHeight: 1.75, marginBottom: "1.75rem" }}>
-              We bring brick oven pizza and fresh steamed seafood straight to your festival, private event, or corporate gathering.
+              We bring brick oven pizza and fresh steamed seafood straight to your festival or corporate event.
             </p>
             <Link href="/contact" style={{
               background: "#B8852A", color: "#fff", padding: "0.9rem 2.25rem", borderRadius: 4,

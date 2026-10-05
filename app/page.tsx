@@ -55,7 +55,7 @@ export default function Home() {
               maxWidth: 440,
               fontFamily: "var(--font-body, 'DM Sans', sans-serif)",
             }}>
-              We cook fresh pizza in under 2 minutes and serve the freshest steamed seafood in Virginia — shrimp, snow crab legs, mussels, crawfish &amp; more.
+              We cook fresh pizza in under 2 minutes and serve the freshest steamed seafood in Virginia — shrimp, oysters, crab &amp; more.
             </p>
 
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
@@ -200,8 +200,8 @@ export default function Home() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
               {[
                 { icon: "🔥", title: "Brick Oven Speed", desc: "Pizza fresh in under 2 minutes — perfect for high-volume events with thousands of guests." },
-                { icon: "🦞", title: "Fresh Seafood Daily", desc: "Shrimp, snow crab, mussels, crawfish & rotating seasonal specials." },
-                { icon: "🎪", title: "Event Specialists", desc: "Built and equipped for large festivals, fairs, corporate events & private parties." },
+                { icon: "🦞", title: "Fresh Seafood Daily", desc: "Shrimp, oysters, and crab." },
+                { icon: "🎪", title: "Event Specialists", desc: "Built and equipped for large festivals and corporate events." },
                 { icon: "🗺️", title: "Virginia-Wide", desc: "We travel statewide to bring the full experience directly to your event." },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="card" style={{ padding: "1.5rem 1.25rem" }}>
@@ -684,7 +684,7 @@ export default function Home() {
               Want to Know Where We&apos;ll Be?
             </h2>
             <p style={{ color: "#7A9E90", lineHeight: 1.85, marginBottom: "2.5rem", fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
-              Follow us on Facebook and Instagram — we post weekly updates on where to find the truck.
+              Follow us on Facebook and Instagram for truck updates and event announcements.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="https://www.facebook.com/tryfabulousfoods" target="_blank" rel="noopener noreferrer" style={{
@@ -735,7 +735,7 @@ export default function Home() {
               <em style={{ color: "#C94E2A", fontStyle: "italic" }}>to Your Event</em>
             </h2>
             <p style={{ color: "#6B6860", lineHeight: 1.8, marginBottom: "2rem", fontSize: "1rem", maxWidth: 440, margin: "0 auto 2rem" }}>
-              Festivals, fairs, corporate events, or private parties — we bring the brick oven to you, anywhere in Virginia.
+              Festivals and corporate events — we bring the brick oven to you, anywhere in Virginia.
             </p>
             <Link href="/contact" className="btn-primary">Book an Event</Link>
           </div>

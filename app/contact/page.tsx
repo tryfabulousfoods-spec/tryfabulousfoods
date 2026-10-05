@@ -48,6 +48,10 @@ export default function ContactPage() {
                     <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 700, color: "#555", marginBottom: "0.4rem", letterSpacing: 1, textTransform: "uppercase" }}>Email *</label>
                     <input name="email" type="email" required style={{ width: "100%", padding: "0.75rem", border: "1px solid #ddd", borderRadius: 4, fontSize: "0.95rem", fontFamily: "Georgia, serif" }} />
                   </div>
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 700, color: "#555", marginBottom: "0.4rem", letterSpacing: 1, textTransform: "uppercase" }}>Phone Number *</label>
+                    <input name="phone" type="tel" required style={{ width: "100%", padding: "0.75rem", border: "1px solid #ddd", borderRadius: 4, fontSize: "0.95rem", fontFamily: "Georgia, serif" }} />
+                  </div>
                 </div>
                 <div style={{ marginBottom: "1rem" }}>
                   <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 700, color: "#555", marginBottom: "0.4rem", letterSpacing: 1, textTransform: "uppercase" }}>Event Date *</label>
@@ -68,9 +72,13 @@ export default function ContactPage() {
                     <option>5,000+</option>
                   </select>
                 </div>
+                <div style={{ marginBottom: "1rem" }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 700, color: "#555", marginBottom: "0.4rem", letterSpacing: 1, textTransform: "uppercase" }}>Event Budget</label>
+                  <input name="budget" style={{ width: "100%", padding: "0.75rem", border: "1px solid #ddd", borderRadius: 4, fontSize: "0.95rem", fontFamily: "Georgia, serif" }} placeholder="$" />
+                </div>
                 <div style={{ marginBottom: "1.5rem" }}>
                   <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 700, color: "#555", marginBottom: "0.4rem", letterSpacing: 1, textTransform: "uppercase" }}>Tell Us About Your Event</label>
-                  <textarea name="body" rows={5} style={{ width: "100%", padding: "0.75rem", border: "1px solid #ddd", borderRadius: 4, fontSize: "0.95rem", fontFamily: "Georgia, serif", resize: "vertical" }} placeholder="Festival, corporate event, private party... any details help!" />
+                  <textarea name="body" rows={5} style={{ width: "100%", padding: "0.75rem", border: "1px solid #ddd", borderRadius: 4, fontSize: "0.95rem", fontFamily: "Georgia, serif", resize: "vertical" }} placeholder="Festival, corporate event... any details help!" />
                 </div>
                 <button type="submit" style={{
                   background: "#D94F00", color: "#fff", padding: "1rem 2rem",
