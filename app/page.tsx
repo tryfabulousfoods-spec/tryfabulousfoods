@@ -382,6 +382,42 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── PHOTO GALLERY ── */}
+        <section id="gallery" style={{ background: "#1C1C18", padding: "5.5rem 1.5rem" }}>
+          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <span style={{ display: "block", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8852A", marginBottom: "0.75rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                Food & Moments
+              </span>
+              <h2 style={{ fontFamily: "var(--font-display, 'Playfair Display', serif)", fontWeight: 800, fontSize: "clamp(1.9rem, 3vw, 2.75rem)", color: "#FAFAF7", marginBottom: "1rem" }}>
+                See It for Yourself
+              </h2>
+              <p style={{ color: "#7A9E90", maxWidth: 520, margin: "0 auto", lineHeight: 1.8, fontSize: "1rem", fontFamily: "var(--font-body, 'DM Sans', sans-serif)" }}>
+                Real food. Real events. Real moments from the road across Virginia.
+              </p>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "0.5rem" }}>
+              {[
+                { src: "/gallery/crab-legs.jpg", alt: "Steamed crab legs seasoned with J.O. spice" },
+                { src: "/gallery/fried-oysters.jpg", alt: "Fried oyster platter with fries" },
+                { src: "/gallery/seafood-platter.jpg", alt: "Seafood platter with shrimp, oysters, and crab cake" },
+                { src: "/gallery/garlic-shrimp.jpg", alt: "Garlic herb shrimp with butter and cocktail sauce" },
+                { src: "/gallery/truck.jpg", alt: "The Try Fabulous Foods truck — Salt Life Seafood and Pizza" },
+              ].map(({ src, alt }) => (
+                <div key={src} style={{ aspectRatio: "1 / 1", overflow: "hidden", borderRadius: 3, background: "#2A2A26" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={src}
+                    alt={alt}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── REVIEWS ── */}
         <section style={{ background: "#FAFAF7", padding: "6rem 1.5rem" }}>
           <div style={{ maxWidth: 1140, margin: "0 auto" }}>
